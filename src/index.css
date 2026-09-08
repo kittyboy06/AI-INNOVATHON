@@ -65,24 +65,78 @@
   }
 
   /* Glowing text effects */
-  .glow-text-cyan {
-    text-shadow: 0 0 10px rgba(0, 242, 254, 0.7), 0 0 20px rgba(0, 242, 254, 0.4);
+  .glow-text-cyan, .glow-text-blue {
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.8), 0 0 25px rgba(0, 210, 255, 0.5), 0 0 50px rgba(0, 136, 255, 0.3);
   }
 
-  .glow-text-violet {
-    text-shadow: 0 0 10px rgba(139, 92, 246, 0.7), 0 0 20px rgba(139, 92, 246, 0.4);
+  .glow-text-red {
+    text-shadow: 0 0 10px rgba(255, 0, 60, 0.85), 0 0 25px rgba(255, 0, 60, 0.55), 0 0 50px rgba(220, 38, 38, 0.3);
   }
 
-  .glow-text-amber {
-    text-shadow: 0 0 10px rgba(245, 158, 11, 0.7), 0 0 20px rgba(245, 158, 11, 0.4);
+  .glow-text-violet, .glow-text-purple {
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.8), 0 0 25px rgba(121, 40, 202, 0.5);
+  }
+
+  .glow-text-amber, .glow-text-gold {
+    text-shadow: 0 0 10px rgba(245, 158, 11, 0.8), 0 0 25px rgba(245, 158, 11, 0.4);
+  }
+
+  /* Star Wars Iconic Logo Frame (Angled bracket frame around AI-INNOVATHON) */
+  .starwars-frame {
+    position: relative;
+    padding: 0.75rem 2rem;
+  }
+  .starwars-frame::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00d2ff 0%, #38bdf8 35%, #ffffff 50%, #ff003c 65%, #ff1744 100%);
+    box-shadow: 0 0 12px rgba(0, 210, 255, 0.8), 0 0 12px rgba(255, 0, 60, 0.8);
+  }
+  .starwars-frame::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00d2ff 0%, #38bdf8 35%, #ffffff 50%, #ff003c 65%, #ff1744 100%);
+    box-shadow: 0 0 12px rgba(0, 210, 255, 0.8), 0 0 12px rgba(255, 0, 60, 0.8);
+  }
+
+  /* Lightsaber Blade Core Glow */
+  .lightsaber-blade-blue {
+    background: linear-gradient(90deg, #ffffff 0%, #e0f2fe 30%, #38bdf8 70%, #00d2ff 100%);
+    box-shadow: 
+      0 0 6px #ffffff,
+      0 0 14px #38bdf8,
+      0 0 30px #00d2ff,
+      0 0 55px #0284c7;
+  }
+
+  .lightsaber-blade-red {
+    background: linear-gradient(90deg, #ffffff 0%, #ffe4e6 30%, #fb7185 70%, #ff003c 100%);
+    box-shadow: 
+      0 0 6px #ffffff,
+      0 0 14px #ff003c,
+      0 0 30px #ef4444,
+      0 0 55px #990000;
+  }
+
+  /* Star Wars Crawl Perspective container */
+  .starwars-perspective {
+    perspective: 450px;
   }
 
   /* Cyber Grid Background */
   .bg-grid-pattern {
     background-size: 32px 32px;
     background-image: 
-      linear-gradient(to right, rgba(0, 242, 254, 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(0, 242, 254, 0.05) 1px, transparent 1px);
+      linear-gradient(to right, rgba(0, 210, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 210, 255, 0.04) 1px, transparent 1px);
   }
 
   /* Scanline Overlay for Holo panels */
@@ -90,7 +144,7 @@
     background: linear-gradient(
       to bottom,
       transparent 50%,
-      rgba(0, 242, 254, 0.03) 51%
+      rgba(0, 210, 255, 0.02) 51%
     );
     background-size: 100% 4px;
   }

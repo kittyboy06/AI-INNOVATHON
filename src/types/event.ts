@@ -32,6 +32,8 @@ export interface ClubItem {
   id: string;
   name: string;
   tagline: string;
+  logo: string;
+  description?: string;
 }
 
 export interface FAQItem {
@@ -45,6 +47,29 @@ export interface MetricItem {
   value: string;
   label: string;
   detail: string;
+}
+
+export interface ChallengeTrack {
+  id: 'hardware' | 'software';
+  title: string;
+  codename: string;
+  badge: string;
+  slogan: string;
+  side: 'red' | 'blue';
+  psReleaseDate: string;
+  psReleaseTime: string;
+  psReleaseDescription: string;
+  whyTimingMatters: string;
+  prepWindow: string;
+  eventDayFocus: string;
+  deliverables: string[];
+  allowedTools: string[];
+  evaluationCriteria: string[];
+  keySteps: {
+    phase: string;
+    timeline: string;
+    description: string;
+  }[];
 }
 
 export type CountdownPhase = 'registration' | 'kickoff' | 'live';

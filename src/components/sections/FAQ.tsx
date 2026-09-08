@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { EVENT_CONFIG } from '../../config/eventConfig';
 import { SciFiBadge } from '../ui/SciFiBadge';
-import { ChevronDown, Search, Layers, Minimize2, Maximize2 } from 'lucide-react';
+import { ChevronDown, Search, Minimize2, Maximize2 } from 'lucide-react';
 
 export const FAQ: React.FC = () => {
   // All collapsed by default
@@ -40,14 +40,14 @@ export const FAQ: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
           <SciFiBadge variant="cyan" className="mb-3">
-            [ KNOWLEDGE BASE // QUERY ARCHIVE ]
+            [ KNOWLEDGE BASE // JEDI & SITH ARCHIVES ]
           </SciFiBadge>
           <h2 className="font-tech text-3xl sm:text-5xl font-extrabold tracking-wider text-slate-100 uppercase">
-            FREQUENTLY ASKED <span className="text-cyber-cyan glow-text-cyan">QUESTIONS</span>
+            FREQUENTLY ASKED <span className="text-jedi-blue glow-text-blue">QUESTIONS</span>
           </h2>
-          <div className="mt-4 h-1 w-24 bg-gradient-to-r from-cyber-cyan to-cyber-blue mx-auto rounded-full" />
+          <div className="mt-4 h-1 w-24 bg-gradient-to-r from-sith-red to-jedi-blue mx-auto rounded-full" />
           <p className="mt-4 text-sm sm:text-base text-slate-400 font-mono">
-            AUTHORITATIVE DIRECTIVES & PARTICIPANT CLARIFICATIONS
+            AUTHORITATIVE DIRECTIVES & DUAL-TRACK CLARIFICATIONS
           </p>
         </div>
 
@@ -63,9 +63,9 @@ export const FAQ: React.FC = () => {
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder="Filter questions..."
+              placeholder="Search hardware, software, dates, rules..."
               aria-label="Filter directives, eligibility, and rules"
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-space-700 bg-space-900/80 text-sm text-slate-100 placeholder-slate-500 font-mono focus:outline-none focus:border-cyber-cyan focus:ring-1 focus:ring-cyber-cyan transition-colors"
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-space-700 bg-space-900/80 text-sm text-slate-100 placeholder-slate-500 font-mono focus:outline-none focus:border-jedi-blue focus:ring-1 focus:ring-jedi-blue transition-colors"
             />
           </div>
 
@@ -73,7 +73,7 @@ export const FAQ: React.FC = () => {
             <button
               type="button"
               onClick={expandAll}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-space-800 bg-space-900/80 hover:border-cyber-cyan/40 hover:text-cyber-cyan transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-space-800 bg-space-900/80 hover:border-jedi-blue/40 hover:text-jedi-blue transition-colors cursor-pointer"
             >
               <Maximize2 className="w-3.5 h-3.5" />
               <span>EXPAND ALL</span>
@@ -81,7 +81,7 @@ export const FAQ: React.FC = () => {
             <button
               type="button"
               onClick={collapseAll}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-space-800 bg-space-900/80 hover:border-cyber-cyan/40 hover:text-cyber-cyan transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-space-800 bg-space-900/80 hover:border-jedi-blue/40 hover:text-jedi-blue transition-colors cursor-pointer"
             >
               <Minimize2 className="w-3.5 h-3.5" />
               <span>COLLAPSE ALL</span>
@@ -98,13 +98,17 @@ export const FAQ: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
             {filteredFaqs.map((faq, idx) => {
               const isOpen = openIds.has(faq.id);
+              const isHwFaq = faq.id.includes('hw');
+              const isSwFaq = faq.id.includes('sw');
 
               return (
                 <div
                   key={faq.id}
                   className={`rounded-xl border transition-all duration-300 overflow-hidden ${
                     isOpen
-                      ? 'border-cyber-cyan/50 bg-space-900/90 shadow-neon-cyan/20 ring-1 ring-cyber-cyan/20'
+                      ? isHwFaq
+                        ? 'border-sith-red/60 bg-space-900/90 shadow-[0_0_15px_rgba(255,0,60,0.15)] ring-1 ring-sith-red/30'
+                        : 'border-jedi-blue/60 bg-space-900/90 shadow-[0_0_15px_rgba(0,210,255,0.15)] ring-1 ring-jedi-blue/30'
                       : 'border-space-800 bg-space-900/60 hover:border-space-700 hover:bg-space-900/80'
                   }`}
                 >
@@ -115,18 +119,20 @@ export const FAQ: React.FC = () => {
                     aria-expanded={isOpen}
                   >
                     <div className="flex items-start gap-3">
-                      <span className="font-mono text-xs text-cyber-cyan/70 shrink-0 mt-0.5 font-bold">
+                      <span className={`font-mono text-xs shrink-0 mt-0.5 font-bold ${
+                        isHwFaq ? 'text-sith-red' : isSwFaq ? 'text-jedi-blue' : 'text-force-magenta'
+                      }`}>
                         Q{idx < 9 ? `0${idx + 1}` : idx + 1}
                       </span>
-                      <span className="font-display text-base font-bold text-slate-100 group-hover:text-cyber-cyan transition-colors leading-snug">
+                      <span className="font-display text-base font-bold text-slate-100 group-hover:text-jedi-blue transition-colors leading-snug">
                         {faq.question}
                       </span>
                     </div>
                     <div
                       className={`p-1 rounded-md shrink-0 transition-all duration-300 ${
                         isOpen
-                          ? 'bg-cyber-cyan/20 text-cyber-cyan rotate-180'
-                          : 'bg-space-800/80 text-slate-400 group-hover:text-cyber-cyan'
+                          ? 'bg-space-800 text-jedi-blue rotate-180'
+                          : 'bg-space-800/80 text-slate-400 group-hover:text-jedi-blue'
                       }`}
                     >
                       <ChevronDown className="w-4 h-4" />
@@ -135,7 +141,9 @@ export const FAQ: React.FC = () => {
 
                   {isOpen && (
                     <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-300 font-sans leading-relaxed border-t border-space-800/80 animate-fadeIn">
-                      <div className="mt-2 pl-3.5 border-l-2 border-cyber-cyan/60 text-slate-300">
+                      <div className={`mt-2 pl-3.5 border-l-2 text-slate-300 ${
+                        isHwFaq ? 'border-sith-red' : 'border-jedi-blue'
+                      }`}>
                         {faq.answer}
                       </div>
                     </div>

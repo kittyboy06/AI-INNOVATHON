@@ -1,18 +1,18 @@
-import { BenefitItem, ClubItem, Coordinator, FAQItem, MetricItem, RuleItem, TimelineItem } from '../types/event';
+import { BenefitItem, ChallengeTrack, ClubItem, Coordinator, FAQItem, MetricItem, RuleItem, TimelineItem } from '../types/event';
 
 export const EVENT_CONFIG = {
   name: "AI-INNOVATHON 2026",
   type: "Inter-College AI Hackathon",
   subtitle: "An Inter-College 8-Hour AI Hackathon",
   tagline: "THINK. BUILD. INNOVATE.",
-  heroPunchline: "8 HOURS. ONE CHALLENGE.",
+  heroPunchline: "8 HOURS. TWO PATHS. ONE GALAXY.",
   department: "Department of Artificial Intelligence & Machine Learning",
   institution: "Jerusalem College of Engineering",
   venue: {
     name: "Jerusalem College of Engineering",
     mapUrl: "https://maps.app.goo.gl/Jbj6Cb1UEZbQmmFp9",
   },
-  theme: "STAR WARS (Galactic Sci-Fi Aesthetic)",
+  theme: "STAR WARS (Red vs Blue Lightsaber Duel Edition)",
   
   // Key Dates & Times
   eventDateDisplay: "18 September 2026",
@@ -21,9 +21,15 @@ export const EVENT_CONFIG = {
   startTime: "9:00 AM",
   regClosingDateDisplay: "8 September 2026",
   
+  // Hardware Track specific dates
+  hardwarePsReleaseDateDisplay: "16 September 2026",
+  hardwarePsReleaseTimeDisplay: "10:00 AM IST",
+  
   // ISO Timestamps for IST (UTC+05:30)
   // Registration closes: 8 Sept 2026 at 23:59:59 IST
   regClosingIso: "2026-09-08T23:59:59+05:30",
+  // Hardware PS released: 16 Sept 2026 at 10:00:00 IST (2 days prior)
+  hardwarePsReleaseIso: "2026-09-16T10:00:00+05:30",
   // Event starts: 18 Sept 2026 at 09:00:00 IST
   eventStartIso: "2026-09-18T09:00:00+05:30",
   
@@ -34,32 +40,31 @@ export const EVENT_CONFIG = {
   prizePoolNumber: 8000,
   paymentMethod: "UPI through the Google Form",
 
-  // Problem statement highlight
-  problemStatementCallout: "PROBLEM STATEMENT REVEALED ON THE SPOT",
-  problemStatementSubtext: "No spoilers. No predefined path. Arrive ready to think fast and build smarter.",
+  // Problem statement highlights
+  problemStatementCallout: "DUAL TRACK CHALLENGE FLOW",
+  problemStatementSubtext: "Hardware Track revealed 2 days early for component prep; Software Track unlocked on the spot for spontaneous AI innovation.",
 
   // External Action URLs
   urls: {
-    // Replace this placeholder with the live Google Form link when provided by organizers
     googleForm: "https://docs.google.com/forms/d/e/1FAIpQLSe-PLACEHOLDER/viewform",
     whatsappGroup: "https://chat.whatsapp.com/DQwMuhNTDNKDlfbTgI06cH",
     googleMaps: "https://maps.app.goo.gl/Jbj6Cb1UEZbQmmFp9",
   },
 
   // WhatsApp Notice
-  whatsappNotice: "All registered participants are required to join the official AI-Innovathon WhatsApp group for important announcements, instructions, and event updates.",
+  whatsappNotice: "All registered participants are required to join the official AI-Innovathon WhatsApp group for problem statement broadcasts, instructions, and event updates.",
 
   // Metrics / Highlights
   metrics: [
     {
       value: "8 HOURS",
       label: "Mission Duration",
-      detail: "Rapid problem-solving, architectural modeling, and agile AI development."
+      detail: "Intense hackathon sprint of rapid AI development and prototype engineering."
     },
     {
       value: "₹8,000",
-      label: "Total Prize Pool",
-      detail: "Rewarding breakthrough AI innovation and exceptional execution."
+      label: "Prize Pool",
+      detail: "Cash awards and prestigious certificates recognizing elite AI engineering."
     },
     {
       value: "₹400",
@@ -67,25 +72,147 @@ export const EVENT_CONFIG = {
       detail: "Per team entry paid via UPI on Google Form submission."
     },
     {
-      value: "ON THE SPOT",
-      label: "Challenge Reveal",
-      detail: "Problem statement unlocked live at kickoff — zero predefined code allowed."
+      value: "2 DAYS EARLY",
+      label: "Hardware PS Release",
+      detail: "Problem statement broadcast on 16/09 for component sourcing and circuit prep."
     },
     {
-      value: "INTER-COLLEGE",
-      label: "Open Collaboration",
-      detail: "Cross-department and cross-college teams welcome (2–4 members)."
+      value: "ON THE SPOT",
+      label: "Software PS Reveal",
+      detail: "Unlocked live on 18/09 at 9:00 AM — pure agile AI coding from scratch."
     }
   ] as MetricItem[],
 
+  // Dual Challenge Tracks with Flow Separation
+  challengeTracks: {
+    hardware: {
+      id: "hardware",
+      title: "Hardware & AIoT Track",
+      codename: "RED SQUADRON // PHYSICAL PROTOTYPING",
+      badge: "REVEALED 2 DAYS EARLY (16/09)",
+      slogan: "Bridge physical sensors, microcontrollers, and intelligent edge models.",
+      side: "red",
+      psReleaseDate: "16 September 2026",
+      psReleaseTime: "10:00 AM IST (T-minus 48 Hours)",
+      psReleaseDescription: "Transmitted 2 days in advance to allow hardware sourcing, circuit schematics, and sensor staging before on-campus assembly.",
+      whyTimingMatters: "Physical prototyping demands component procurement, pinout design, and driver testing. 48 hours gives hardware teams the runway to bring tested components ready for on-site physical casing and live demo integration.",
+      prepWindow: "48 Hours prior to Hackathon Day (16/09 – 18/09)",
+      eventDayFocus: "Physical circuit assembly, embedded edge AI model deployment, sensor calibration, and live physical demonstration.",
+      deliverables: [
+        "Physical Working Prototype (Live Demo on 18/09)",
+        "Circuit Schematics & Wiring Diagrams",
+        "GitHub Repository (Firmware + Edge AI Code)",
+        "PPT / Slide Presentation Deck"
+      ],
+      allowedTools: [
+        "Arduino, ESP32, Raspberry Pi, Jetson Nano, STM32",
+        "Sensors (Camera, Ultrasonic, IMU, Bio-sensors, Relays)",
+        "Edge AI (TinyML, TensorFlow Lite, Edge Impulse, ONNX)",
+        "IoT Brokers (MQTT, WebSockets, Firebase, AWS IoT)"
+      ],
+      evaluationCriteria: [
+        "Live Working Demonstration & Stability (35%)",
+        "Edge AI / Intelligent Processing Depth (25%)",
+        "Circuit Architecture & Engineering Quality (20%)",
+        "Presentation & Defense of Design (20%)"
+      ],
+      keySteps: [
+        {
+          phase: "STAGE 01 // CHALLENGE BROADCAST",
+          timeline: "16 Sept (10:00 AM IST)",
+          description: "Hardware problem statement transmitted via official portal and WhatsApp."
+        },
+        {
+          phase: "STAGE 02 // COMPONENT STAGING",
+          timeline: "16 - 17 Sept (48h Window)",
+          description: "Teams source boards, test sensor breadboards, and draft circuit schematics."
+        },
+        {
+          phase: "STAGE 03 // ON-SITE CHECK-IN",
+          timeline: "18 Sept (8:30 AM)",
+          description: "Report to Jerusalem College of Engineering and set up hardware testing bench."
+        },
+        {
+          phase: "STAGE 04 // EMBEDDED INTEGRATION",
+          timeline: "18 Sept (9:00 AM - 5:00 PM)",
+          description: "Assemble physical chassis, calibrate sensor feeds, and deploy edge AI models."
+        },
+        {
+          phase: "STAGE 05 // JURY LIVE DEMO",
+          timeline: "18 Sept (5:15 PM)",
+          description: "Present functioning hardware prototype live in action before the judging panel."
+        }
+      ]
+    } as ChallengeTrack,
+
+    software: {
+      id: "software",
+      title: "Software & AI Systems Track",
+      codename: "BLUE SQUADRON // NEURAL ARCHITECTS",
+      badge: "REVEALED ON THE SPOT (18/09)",
+      slogan: "Architect cognitive agents, neural pipelines, and scalable web solutions.",
+      side: "blue",
+      psReleaseDate: "18 September 2026",
+      psReleaseTime: "9:00 AM IST (Hackathon Kickoff)",
+      psReleaseDescription: "Unlocked live on the auditorium screen at 9:00 AM. Zero pre-existing code or pre-built repositories allowed.",
+      whyTimingMatters: "Software testing evaluates spontaneous innovation, prompt architecture, API integration, and agile development. On-the-spot unlock ensures complete fair play across all competing institutions.",
+      prepWindow: "Zero prior preparation — sprint begins live at 9:00 AM",
+      eventDayFocus: "End-to-end AI system design, model fine-tuning/RAG pipelines, full-stack application development, and user interface polish.",
+      deliverables: [
+        "GitHub Repository with Hackathon Commit History",
+        "PPT / Slide Presentation Deck",
+        "Optional Live Web / Mobile Prototype Demo"
+      ],
+      allowedTools: [
+        "Modern Web/App Frameworks (React, Next.js, Node, FastAPI)",
+        "AI Foundation Models & APIs (Gemini, OpenAI, Hugging Face)",
+        "Vector Databases & Agent Frameworks (LangChain, Pinecone)",
+        "Public Open-Source Libraries & UI Kits"
+      ],
+      evaluationCriteria: [
+        "Innovation & Practical Problem Impact (35%)",
+        "AI / Model Architecture & Depth (25%)",
+        "Code Quality, Execution & Completeness (20%)",
+        "Pitch Deck & Presentation Clarity (20%)"
+      ],
+      keySteps: [
+        {
+          phase: "STAGE 01 // ON-SITE REPORTING",
+          timeline: "18 Sept (8:30 AM)",
+          description: "Check in at the registration desk, verify team credentials, connect to high-speed Wi-Fi."
+        },
+        {
+          phase: "STAGE 02 // SURPRISE UNLOCK",
+          timeline: "18 Sept (9:00 AM)",
+          description: "Classified software problem statement is revealed on the spot. Clock starts ticking."
+        },
+        {
+          phase: "STAGE 03 // AGILE BUILD SPRINT",
+          timeline: "18 Sept (9:00 AM - 1:00 PM)",
+          description: "Architect backend APIs, prompt/fine-tune AI models, build frontend UI."
+        },
+        {
+          phase: "STAGE 04 // MENTOR ITERATION",
+          timeline: "18 Sept (1:00 PM - 5:00 PM)",
+          description: "Refine architecture with faculty mentors, test edge cases, push clean git commits."
+        },
+        {
+          phase: "STAGE 05 // FINAL COMMIT & PPT",
+          timeline: "18 Sept (5:00 PM)",
+          description: "Submit GitHub repo URL and final slide deck before the gate bell."
+        }
+      ]
+    } as ChallengeTrack
+  },
+
   // Eligibility Rules
   eligibility: [
-    "Open to all Undergraduate (UG) and Postgraduate (PG) students.",
+    "Open to all Undergraduate (UG) and Postgraduate (PG) students across all years.",
     "Team size: 2 to 4 members per team.",
-    "Cross-department teams are fully permitted.",
+    "Cross-department teams within colleges are fully permitted.",
     "Cross-college teams and inter-college collaboration are fully permitted.",
     "A participant can be part of only one team.",
-    "There is no stated maximum number of teams."
+    "There is no restriction on the number of teams representing an institution."
   ],
 
   // Hackathon Rules
@@ -93,35 +220,42 @@ export const EVENT_CONFIG = {
     {
       id: "ai-tools",
       category: "tools",
-      title: "AI Tools & LLMs",
+      title: "AI Tools & Foundation Models",
       status: "allowed",
-      description: "Participants may freely use AI tools, copilot assistants, and foundation models during development."
+      description: "Participants are encouraged to freely use AI tools, Copilot assistants, and foundation models."
     },
     {
       id: "pre-existing-code",
       category: "code",
-      title: "Pre-existing Code / Repositories",
+      title: "Pre-existing Code / Software Repositories",
       status: "not_allowed",
-      description: "No pre-existing code, pre-built solutions, or pre-configured repositories may be used. Everything must be built during the 8-hour window."
+      description: "No pre-existing software code or pre-built repositories may be used. All software code must be committed during the 8-hour sprint."
+    },
+    {
+      id: "hardware-components",
+      category: "resources",
+      title: "Hardware Modules & Sensor Breakouts",
+      status: "allowed",
+      description: "Hardware teams may bring pre-tested development boards and standard breakout modules. Final prototype assembly and AI integration happen on-site."
     },
     {
       id: "external-apis",
       category: "resources",
-      title: "External APIs",
+      title: "Cloud APIs & Inference Endpoints",
       status: "allowed",
-      description: "External cloud APIs, inference endpoints, and third-party services are allowed."
+      description: "External APIs, serverless backends, and cloud AI inference endpoints are fully permitted."
     },
     {
       id: "open-source",
       category: "resources",
-      title: "Open-Source Libraries / Tools",
+      title: "Open-Source Packages & Libraries",
       status: "allowed",
-      description: "Public open-source frameworks, packages, UI kits, and libraries are allowed."
+      description: "Public open-source libraries, UI components, and ML packages are allowed across both tracks."
     },
     {
       id: "online-datasets",
       category: "resources",
-      title: "Online Datasets",
+      title: "Online Public Datasets",
       status: "allowed",
       description: "Publicly accessible datasets from Kaggle, Hugging Face, or research portals are allowed."
     }
@@ -135,141 +269,166 @@ export const EVENT_CONFIG = {
         description: "Complete source code committed with commit history from the hackathon session."
       },
       {
-        title: "PPT / Presentation",
-        description: "Slide deck summarizing problem analysis, technical architecture, and impact."
+        title: "PPT / Presentation Deck",
+        description: "Slide deck summarizing problem analysis, technical architecture, and real-world impact."
       }
     ],
+    trackDeliverables: {
+      hardware: "Physical working prototype demonstration for jury + circuit diagrams.",
+      software: "Working software demo (web/app/CLI) or prototype demonstration."
+    },
     optional: [
       {
-        title: "Working Demo",
-        description: "Live prototype demonstration for judges during optional presentation slots."
+        title: "Live Working Demo",
+        description: "Live prototype demonstration for judges during evaluation rounds."
       }
     ],
-    notice: "Final submission details and exact deadlines will be announced during the event."
+    notice: "Final submission details and submission portal links will be announced during the event."
   },
 
   // Participant Logistics & Benefits
   benefits: [
     {
       id: "cert",
-      title: "Participation Certificate",
-      description: "Official recognition awarded to all verified attendees.",
+      title: "Verified Participation Certificate",
+      description: "Official certificate awarded to all verified attendees by Jerusalem College of Engineering.",
+      provided: true
+    },
+    {
+      id: "prizes",
+      title: "₹8,000 Cash Prize Pool",
+      description: "Grand cash awards, winning trophies, and merit certificates for top innovators.",
       provided: true
     },
     {
       id: "snacks",
       title: "Snacks & Refreshments",
-      description: "Refreshments provided throughout the intense 8-hour sprint.",
+      description: "Energizing snacks, tea/coffee, and beverages provided throughout the intense 8-hour sprint.",
       provided: true
     },
     {
       id: "wifi",
-      title: "High-Speed Wi-Fi / Internet",
-      description: "Campus connectivity provided for development and cloud APIs.",
-      provided: true
-    },
-    {
-      id: "mentors",
-      title: "Mentor Support",
-      description: "Domain experts and faculty guidance available during the build.",
+      title: "High-Speed Campus Wi-Fi",
+      description: "Dedicated campus internet connectivity provided for cloud APIs and research.",
       provided: true
     },
     {
       id: "workspace",
-      title: "Dedicated Workspace",
-      description: "Collaborative lab workspace for team ideation and development.",
+      title: "Dedicated Team Workstation",
+      description: "Collaborative laboratory setup with power outlets for every team.",
       provided: true
     },
     {
-      id: "prizes",
-      title: "Prizes & Recognition",
-      description: "Opportunity to compete for the ₹8,000 prize pool.",
+      id: "hardware-lab",
+      title: "Hardware Testing Benches & Power Strips",
+      description: "Dedicated hardware workbenches and extension sockets for Hardware Track participants.",
+      provided: true
+    },
+    {
+      id: "mentors",
+      title: "Expert Faculty & AI Mentorship",
+      description: "One-on-one technical mentorship and guidance from AIML domain experts throughout the build.",
+      provided: true
+    },
+    {
+      id: "networking",
+      title: "Inter-College AI Networking",
+      description: "Connect with bright AI engineers, student developers, and academic researchers.",
       provided: true
     },
     {
       id: "lunch",
-      title: "Lunch",
-      description: "Lunch is not provided. Participants may utilize college campus canteens or bring their own meals.",
+      title: "Lunch (Self-Arranged)",
+      description: "Lunch is not provided. Participants may purchase meals at college canteens or carry packed lunch.",
       provided: false
     },
     {
       id: "stay",
-      title: "Accommodation",
-      description: "Accommodation is not available. Please plan local day transit accordingly.",
+      title: "Accommodation (Single-Day Event)",
+      description: "Accommodation is not available. Please plan local travel for the 8-hour day sprint.",
       provided: false
     },
     {
       id: "swags",
-      title: "Swags & Merch",
-      description: "Swags are not provided for this edition.",
+      title: "Event Merchandise / Swags",
+      description: "Swags are not distributed for this edition.",
       provided: false
     }
   ] as BenefitItem[],
 
+  // What to Bring Checklist
+  whatToBring: [
+    "College Student ID Cards (Mandatory for campus verification)",
+    "Laptops, Chargers & Power Adapters",
+    "Hardware Kits, Microcontrollers & Sensors (For Hardware Track teams)",
+    "Personal Water Bottles & Packed Lunch (Optional)",
+    "Mobile Phone with WhatsApp for live announcements"
+  ],
+
   // Timeline
   timeline: [
     {
+      id: "hw-ps-reveal",
+      time: "16 Sept • 10:00 AM",
+      title: "⚡ Hardware Track Problem Statement Broadcast",
+      description: "The Hardware PS is released 2 days prior to allow component procurement, circuit topology modeling, and sensor breadboarding.",
+      status: "confirmed"
+    },
+    {
       id: "reporting",
-      time: "8:30 AM",
-      title: "Reporting & Registration Desk",
-      description: "Participants check in at Jerusalem College of Engineering and verify team badges.",
+      time: "18 Sept • 8:30 AM",
+      title: "Reporting & Verification Desk",
+      description: "Teams arrive at Jerusalem College of Engineering, verify registrations, and collect mission badges.",
       status: "confirmed"
     },
     {
       id: "inauguration",
-      time: "8:30 AM",
+      time: "18 Sept • 8:30 AM",
       title: "Inauguration Ceremony",
-      description: "Official welcome address by the Department of AI & ML.",
+      description: "Welcome address by Department of AI & ML and official hackathon briefing.",
       status: "confirmed"
     },
     {
-      id: "start",
-      time: "9:00 AM",
-      title: "Official Event Start & Mission Briefing",
-      description: "The 8-hour hackathon timer commences.",
+      id: "start-sw-reveal",
+      time: "18 Sept • 9:00 AM",
+      title: "💻 Software Problem Statement Reveal & Kickoff",
+      description: "Software PS unlocked live on the spot. The 8-hour build sprint timer commences for both tracks.",
       status: "confirmed"
-    },
-    {
-      id: "challenge-reveal",
-      time: "TBA",
-      title: "Problem Statement Reveal",
-      description: "The classified hackathon challenge is revealed on the spot.",
-      status: "tba"
     },
     {
       id: "building-phase",
-      time: "8 Hours",
-      title: "Development Sprint & Mentor Check-ins",
-      description: "Teams build, innovate, and test their AI solutions.",
+      time: "9:00 AM – 5:00 PM",
+      title: "8-Hour Development Sprint & Mentor Rounds",
+      description: "Teams architect, code, and test their AI solutions with active faculty and mentor check-ins.",
       status: "confirmed"
     },
     {
       id: "snacks-break",
-      time: "TBA",
-      title: "Refreshment / Snacks Distribution",
-      description: "Snacks and beverages provided to power through the sprint.",
-      status: "tba"
+      time: "1:00 PM – 1:30 PM",
+      title: "Snacks & Refreshment Distribution",
+      description: "Energizing refreshments provided to power participants through the afternoon build.",
+      status: "confirmed"
     },
     {
       id: "submission-gate",
-      time: "TBA",
-      title: "Code & Slide Submission Gate",
-      description: "Final GitHub repository and PPT upload link made active.",
-      status: "tba"
+      time: "18 Sept • 5:00 PM",
+      title: "Code & Hardware Submission Gate Closes",
+      description: "Final GitHub repositories committed and PPT presentations submitted.",
+      status: "confirmed"
     },
     {
       id: "evaluation",
-      time: "TBA",
-      title: "Evaluation & Optional Demos",
-      description: "Jury review of submitted solutions and presentations.",
-      status: "tba"
+      time: "5:15 PM – 6:15 PM",
+      title: "Jury Review & Live Prototype Demos",
+      description: "Evaluation panels review code, slide decks, and evaluate live hardware prototypes.",
+      status: "confirmed"
     },
     {
       id: "valedictory",
-      time: "TBA",
-      title: "Results & Prize Distribution",
-      description: "Announcement of winners and awarding of the ₹8,000 prize pool.",
-      status: "tba"
+      time: "18 Sept • 6:30 PM",
+      title: "Valedictory & ₹8,000 Prize Distribution",
+      description: "Announcement of top winners, awarding of cash prizes and certificates of excellence.",
+      status: "confirmed"
     }
   ] as TimelineItem[],
 
@@ -278,42 +437,42 @@ export const EVENT_CONFIG = {
     {
       step: "01",
       title: "REGISTER",
-      description: "Complete team registration and UPI payment through the Google Form."
+      description: "Register your 2–4 member squad via the official Google Form with ₹400 UPI payment."
     },
     {
       step: "02",
-      title: "REPORT",
-      description: "Reach the Jerusalem College of Engineering campus by 8:30 AM."
+      title: "CHOOSE TRACK",
+      description: "Compete in the Hardware Track (PS 2 days early) or Software Track (PS on the spot)."
     },
     {
       step: "03",
-      title: "INAUGURATION",
-      description: "Join the opening ceremony starting at 8:30 AM."
+      title: "REPORT",
+      description: "Arrive at Jerusalem College of Engineering campus by 8:30 AM on 18 September 2026."
     },
     {
       step: "04",
-      title: "CHALLENGE REVEAL",
-      description: "Receive the surprise problem statement revealed on the spot."
+      title: "COMMENCE",
+      description: "Attend inauguration at 8:30 AM; Software PS unlocked live at 9:00 AM."
     },
     {
       step: "05",
       title: "BUILD",
-      description: "Architect and develop your AI solution during the 8-hour challenge."
+      description: "Sprint for 8 hours with mentor support, lab workstations, and campus Wi-Fi."
     },
     {
       step: "06",
       title: "SUBMIT",
-      description: "Submit your GitHub repository and PPT presentation before the bell."
+      description: "Commit your GitHub repository and upload your PPT slide deck before 5:00 PM."
     },
     {
       step: "07",
-      title: "PRESENT",
-      description: "Showcase your prototype if you opt for the optional live demo."
+      title: "DEMONSTRATE",
+      description: "Showcase live hardware prototypes or software demos before the judging panel."
     },
     {
       step: "08",
-      title: "RESULTS",
-      description: "Compete for top honors and a share of the ₹8,000 prize pool."
+      title: "WIN",
+      description: "Compete for top honors, merit certificates, and a share of the ₹8,000 prize pool."
     }
   ],
 
@@ -322,22 +481,30 @@ export const EVENT_CONFIG = {
     {
       id: "association-of-aiml",
       name: "Association of AIML",
-      tagline: "Student technical chapter promoting cutting-edge AI discourse"
+      tagline: "Student technical chapter promoting cutting-edge AI discourse",
+      logo: "/logos/logo-aaiml.png",
+      description: "Premier departmental student organization spearheading artificial intelligence and deep learning initiatives."
     },
     {
       id: "intellizone",
       name: "Intellizone",
-      tagline: "Innovation hub driving intelligent systems and algorithms"
+      tagline: "Innovation hub driving intelligent systems and algorithms",
+      logo: "/logos/logo-intellizone.png",
+      description: "Technical innovation and research club fostering applied machine learning and automation prototypes."
     },
     {
       id: "code-mavericks",
       name: "Code Mavericks",
-      tagline: "Elite competitive programming and software engineering circle"
+      tagline: "Elite competitive programming and software engineering circle",
+      logo: "/logos/logo-codemavericks.png",
+      description: "Student developer consortium specializing in algorithmic problem solving, software craft, and hackathon mastery."
     },
     {
       id: "iei-of-aiml",
       name: "IEI of AIML",
-      tagline: "Institution of Engineers (India) collegiate student division"
+      tagline: "Institution of Engineers (India) collegiate student division",
+      logo: "/logos/logo-iei.webp",
+      description: "Chartered student branch of The Institution of Engineers (India) advancing professional engineering practices."
     }
   ] as ClubItem[],
 
@@ -369,37 +536,37 @@ export const EVENT_CONFIG = {
     ] as Coordinator[]
   },
 
-  // FAQs (Exact 19 questions from prompt)
+  // FAQs
   faqs: [
     {
       id: "faq-1",
       question: "When is AI-Innovathon?",
-      answer: "AI-Innovathon takes place on 18 September 2026. Reporting is at 8:30 AM and the official event starts at 9:00 AM."
+      answer: "AI-Innovathon takes place on 18 September 2026 (18/09). Reporting is at 8:30 AM and the official building sprint commences at 9:00 AM."
+    },
+    {
+      id: "faq-ps-split",
+      question: "How is the challenge split between Hardware and Software?",
+      answer: "The hackathon features two separated challenge tracks: Hardware Track (problem statement revealed 2 days early on 16 September 2026 for component sourcing and circuit prep) and Software Track (problem statement revealed on the spot at 9:00 AM on 18 September 2026 for pure spontaneous AI coding)."
+    },
+    {
+      id: "faq-hw-reason",
+      question: "Why is the Hardware problem statement released 2 days before the event?",
+      answer: "Hardware prototyping requires physical component procurement (microcontrollers, specific sensors, actuators, breakout boards) and circuit schematic drafting. Giving 48 hours ensures hardware squads can arrive at the venue on 18/09 with components ready for physical assembly, edge AI model deployment, and live demonstration."
+    },
+    {
+      id: "faq-sw-spot",
+      question: "When is the Software problem statement revealed?",
+      answer: "The Software problem statement is unlocked on the spot at 9:00 AM on 18 September 2026 in the auditorium. Strictly zero pre-existing code is allowed, ensuring an authentic 8-hour sprint."
     },
     {
       id: "faq-2",
       question: "Where is the event?",
-      answer: "The hackathon will be hosted at Jerusalem College of Engineering. Use the 'Get Directions' button on this site to open Google Maps."
+      answer: "The hackathon will be hosted at Jerusalem College of Engineering, Chennai. Use the 'Get Directions' button on this site to open Google Maps navigation."
     },
     {
       id: "faq-3",
       question: "How long is the hackathon?",
-      answer: "The hackathon is an intense 8-hour continuous building sprint."
-    },
-    {
-      id: "faq-4",
-      question: "What time should participants report?",
-      answer: "Participants are required to report at the venue by 8:30 AM for verification and the inauguration ceremony."
-    },
-    {
-      id: "faq-5",
-      question: "What time does the event start?",
-      answer: "The official event commences at 9:00 AM."
-    },
-    {
-      id: "faq-6",
-      question: "When is the problem statement revealed?",
-      answer: "The problem statement is revealed on the spot at the event! There are no prior spoilers or predefined tasks."
+      answer: "The hackathon is an intense 8-hour continuous building sprint from 9:00 AM to 5:00 PM on 18 September 2026."
     },
     {
       id: "faq-7",
@@ -414,72 +581,52 @@ export const EVENT_CONFIG = {
     {
       id: "faq-9",
       question: "What is the prize pool?",
-      answer: "The total prize pool for AI-INNOVATHON 2026 is ₹8,000."
+      answer: "The total prize pool for AI-INNOVATHON 2026 is ₹8,000, along with trophies and merit certificates."
     },
     {
       id: "faq-10",
       question: "Are AI tools allowed?",
-      answer: "Yes! Participants may freely utilize AI tools, assistants, and foundation models during development."
-    },
-    {
-      id: "faq-11",
-      question: "Can teams use external APIs?",
-      answer: "Yes, external APIs and cloud services are permitted."
-    },
-    {
-      id: "faq-12",
-      question: "Can open-source tools be used?",
-      answer: "Yes, open-source libraries, packages, and frameworks are allowed."
-    },
-    {
-      id: "faq-13",
-      question: "Can online datasets be used?",
-      answer: "Yes, publicly available online datasets are allowed."
+      answer: "Yes! Participants across both tracks may freely utilize AI tools, GitHub Copilot, ChatGPT, Gemini, and foundation models during development."
     },
     {
       id: "faq-14",
       question: "Can pre-existing code or repositories be used?",
-      answer: "No. Pre-existing code, pre-built modules, or existing project repositories are strictly not allowed. All development must take place during the hackathon."
+      answer: "No. Pre-existing code or pre-built software project repositories are strictly forbidden. All code must be authored and committed during the hackathon. Hardware teams may bring pre-tested component breakout modules, but system integration must be executed on-site."
     },
     {
       id: "faq-15",
       question: "What must be submitted?",
-      answer: "A GitHub repository containing your project code and a PPT / presentation slide deck are required."
-    },
-    {
-      id: "faq-16",
-      question: "Is a demo required?",
-      answer: "No, a live demo is optional. You may choose to present one during judging."
+      answer: "A GitHub repository containing your project code and a PPT / presentation slide deck are required. Hardware teams also present a live physical working prototype to the jury."
     },
     {
       id: "faq-17",
       question: "Is lunch provided?",
-      answer: "No, lunch is not provided. Participants can purchase food on campus or bring their own meals."
+      answer: "No, lunch is not provided. Participants can purchase lunch at college campus canteens or bring their own meals."
     },
     {
       id: "faq-18",
       question: "Are snacks provided?",
-      answer: "Yes, refreshments and snacks will be provided during the event."
+      answer: "Yes! Refreshments, tea/coffee, and snacks will be provided during the event."
     },
     {
       id: "faq-19",
       question: "Is accommodation available?",
-      answer: "No, accommodation is not available."
+      answer: "No, accommodation is not available. Please plan local transit for the single-day event."
     },
     {
       id: "faq-20",
       question: "Are swags provided?",
-      answer: "No, swags are not provided."
+      answer: "No, swags are not provided for this edition."
     },
     {
       id: "faq-21",
       question: "Do registered participants need to join WhatsApp?",
-      answer: "Yes! All registered participants are required to join the official WhatsApp group for important announcements, rules, and event day updates."
+      answer: "Yes! All registered participants are required to join the official WhatsApp group for problem statement broadcasts, instructions, and event day announcements."
     },
     {
-      id: "faq-22",
-      question: "How do I register?",
-      answer: "Click the 'Register Now' button on this website to fill out the official Google Form and complete UPI payment."
+      id: "faq-hw-bring",
+      question: "What should Hardware teams bring to the venue?",
+      answer: "Hardware teams should bring their development boards (Arduino, ESP32, Raspberry Pi, etc.), sensors, connecting wires, breadboards, batteries/power banks, and programming cables. Power extension strips will be available in the lab."
     }
   ] as FAQItem[]
 } as const;

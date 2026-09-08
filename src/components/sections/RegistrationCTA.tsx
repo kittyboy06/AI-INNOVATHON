@@ -2,17 +2,17 @@ import React from 'react';
 import { EVENT_CONFIG } from '../../config/eventConfig';
 import { GlowingButton } from '../ui/GlowingButton';
 import { SciFiBadge } from '../ui/SciFiBadge';
-import { ExternalLink, MessageCircle, CreditCard, ShieldCheck, AlertCircle, ArrowUpRight } from 'lucide-react';
+import { ExternalLink, MessageCircle, CreditCard, ShieldCheck, AlertCircle, ArrowUpRight, Calendar } from 'lucide-react';
 
 export const RegistrationCTA: React.FC = () => {
   return (
     <section id="register" className="relative py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         {/* Main Registration Command Center Card */}
-        <div className="relative rounded-3xl border-2 border-cyber-cyan/40 bg-gradient-to-b from-space-900 via-space-900/90 to-space-950 p-8 sm:p-12 shadow-neon-cyan backdrop-blur-xl overflow-hidden">
+        <div className="relative rounded-3xl border-2 border-jedi-blue/40 bg-gradient-to-b from-space-900 via-space-900/90 to-space-950 p-8 sm:p-12 shadow-[0_0_35px_rgba(0,210,255,0.25)] backdrop-blur-xl overflow-hidden">
           {/* Cosmic background glow */}
-          <div className="absolute top-0 right-0 w-80 h-80 bg-cyber-cyan/10 rounded-full blur-[100px] pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-80 h-80 bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute top-0 right-0 w-80 h-80 bg-jedi-blue/10 rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-sith-red/10 rounded-full blur-[100px] pointer-events-none" />
 
           {/* Header */}
           <div className="text-center max-w-2xl mx-auto mb-10">
@@ -20,34 +20,46 @@ export const RegistrationCTA: React.FC = () => {
               [ REGISTRATION GATEWAY ONLINE ]
             </SciFiBadge>
             <h2 className="font-tech text-3xl sm:text-5xl font-black tracking-wider text-slate-100 uppercase">
-              READY TO ACCEPT THE <span className="text-cyber-cyan glow-text-cyan">CHALLENGE?</span>
+              CHOOSE YOUR <span className="text-jedi-blue glow-text-blue">SIDE</span> & <span className="text-sith-red glow-text-red">REGISTER</span>
             </h2>
             <p className="mt-3 text-sm sm:text-base text-slate-300 font-mono">
-              SECURE YOUR TEAM'S ROSTER BEFORE LAUNCH
+              SECURE YOUR SQUADRON'S ROSTER BEFORE LAUNCH ON 18 SEPTEMBER 2026
             </p>
           </div>
 
-          {/* Pricing & Deadline Badge */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto mb-8">
+          {/* Pricing, Event Date & Deadline Badges */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-8">
             <div className="flex items-center gap-3 p-4 rounded-xl border border-space-700 bg-space-950/70">
-              <CreditCard className="w-6 h-6 text-cyber-cyan" />
+              <CreditCard className="w-6 h-6 text-jedi-blue" />
               <div>
                 <span className="font-mono text-[10px] text-slate-400 uppercase tracking-widest">
-                  TEAM ENTRY FEE
+                  ENTRY FEE
                 </span>
-                <p className="font-tech text-2xl font-black text-slate-100">
+                <p className="font-tech text-xl font-black text-slate-100">
                   {EVENT_CONFIG.registrationFee}
                 </p>
               </div>
             </div>
 
             <div className="flex items-center gap-3 p-4 rounded-xl border border-space-700 bg-space-950/70">
-              <ShieldCheck className="w-6 h-6 text-cyber-amber" />
+              <Calendar className="w-6 h-6 text-force-magenta" />
+              <div>
+                <span className="font-mono text-[10px] text-slate-400 uppercase tracking-widest">
+                  HACKATHON DATE
+                </span>
+                <p className="font-tech text-xl font-black text-white">
+                  18/09/2026
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 p-4 rounded-xl border border-space-700 bg-space-950/70">
+              <ShieldCheck className="w-6 h-6 text-imperial-amber" />
               <div>
                 <span className="font-mono text-[10px] text-slate-400 uppercase tracking-widest">
                   REGISTRATION DEADLINE
                 </span>
-                <p className="font-tech text-lg sm:text-xl font-bold text-amber-300">
+                <p className="font-tech text-base font-bold text-amber-300">
                   {EVENT_CONFIG.regClosingDateDisplay}
                 </p>
               </div>
@@ -65,10 +77,10 @@ export const RegistrationCTA: React.FC = () => {
               fullWidth
               icon={<ArrowUpRight className="w-5 h-5" />}
             >
-              REGISTER VIA GOOGLE FORM
+              REGISTER VIA GOOGLE FORM (₹400)
             </GlowingButton>
             <p className="text-xs font-mono text-slate-400">
-              * Payment is completed via UPI directly inside the registration Google Form.
+              * Payment is completed via UPI directly inside the official Google Form.
             </p>
           </div>
 
@@ -90,12 +102,12 @@ export const RegistrationCTA: React.FC = () => {
               <div className="space-y-2 text-center sm:text-left">
                 <div className="inline-flex items-center gap-2 text-xs font-mono font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-500/50 px-3 py-1 rounded-full">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                  <span>OFFICIAL COMMUNITY</span>
+                  <span>OFFICIAL COMMUNITY TRANSMISSION</span>
                 </div>
                 <h3 className="font-display text-xl sm:text-2xl font-bold text-slate-100">
                   Join The Official WhatsApp Group
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-300 max-w-xl leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-300 max-w-xl leading-relaxed font-sans">
                   <strong>{EVENT_CONFIG.whatsappNotice}</strong>
                 </p>
               </div>

@@ -42,8 +42,31 @@ export const Footer: React.FC = () => {
             </p>
 
             <div className="inline-flex items-center gap-2 text-xs font-mono text-slate-400 bg-space-900/60 border border-space-800 px-3 py-1.5 rounded-md">
-              <MapPin className="w-3.5 h-3.5 text-cyber-cyan" />
+              <MapPin className="w-3.5 h-3.5 text-jedi-blue" />
               <span>Jerusalem College of Engineering, Chennai</span>
+            </div>
+
+            {/* Organizing Chapters Logos Strip */}
+            <div className="pt-2">
+              <span className="font-mono text-[10px] text-slate-500 uppercase tracking-widest block mb-2">
+                COLLABORATING STUDENT CHAPTERS
+              </span>
+              <div className="flex flex-wrap items-center gap-2.5">
+                {EVENT_CONFIG.clubs.map((club) => (
+                  <a
+                    key={club.id}
+                    href="#clubs"
+                    className="w-9 h-9 rounded-lg bg-white/90 p-1 flex items-center justify-center border border-space-700 hover:border-jedi-blue transition-colors shadow-sm"
+                    title={club.name}
+                  >
+                    <img
+                      src={club.logo}
+                      alt={club.name}
+                      className="max-h-full max-w-full object-contain"
+                    />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 

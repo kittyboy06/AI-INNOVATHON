@@ -19,15 +19,15 @@ export const EVENT_CONFIG = {
   eventDuration: "8 Hours",
   reportingTime: "8:30 AM",
   startTime: "9:00 AM",
-  regClosingDateDisplay: "8 September 2026",
+  regClosingDateDisplay: "16 September 2026",
   
   // Hardware Track specific dates
   hardwarePsReleaseDateDisplay: "16 September 2026",
   hardwarePsReleaseTimeDisplay: "10:00 AM IST",
   
   // ISO Timestamps for IST (UTC+05:30)
-  // Registration closes: 8 Sept 2026 at 23:59:59 IST
-  regClosingIso: "2026-09-08T23:59:59+05:30",
+  // Registration closes: 16 Sept 2026 at 23:59:59 IST
+  regClosingIso: "2026-09-16T23:59:59+05:30",
   // Hardware PS released: 16 Sept 2026 at 10:00:00 IST (2 days prior)
   hardwarePsReleaseIso: "2026-09-16T10:00:00+05:30",
   // Event starts: 18 Sept 2026 at 09:00:00 IST
@@ -576,7 +576,7 @@ export const EVENT_CONFIG = {
     {
       id: "faq-8",
       question: "When does registration close?",
-      answer: "Registration closes strictly on 8 September 2026."
+      answer: "Registration closes strictly on 16 September 2026 (16/09)."
     },
     {
       id: "faq-9",

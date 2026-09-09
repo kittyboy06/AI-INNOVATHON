@@ -150,7 +150,7 @@ export const Hero: React.FC = () => {
             <span>REGISTRATION FEE: {EVENT_CONFIG.registrationFee}</span>
           </span>
           <span>•</span>
-          <span>CLOSES: {EVENT_CONFIG.regClosingDateDisplay}</span>
+          <span>REGISTRATION CLOSES: {EVENT_CONFIG.regClosingDateDisplay}</span>
         </div>
       </div>
     </section>

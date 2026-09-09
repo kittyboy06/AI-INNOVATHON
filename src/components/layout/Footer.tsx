@@ -70,7 +70,7 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Col 2: Navigation Links */}
+          {/* Col 2: Navigation Links
           <div>
             <h4 className="font-mono text-xs font-bold uppercase tracking-widest text-cyber-cyan mb-4">
               TELEMETRY SITEMAP
@@ -87,7 +87,7 @@ export const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Col 3: Direct Actions */}
           <div className="space-y-3">

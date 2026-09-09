@@ -28,8 +28,9 @@ export const Hero: React.FC = () => {
 
         {/* Organizer Header & Collaborating Chapters Logos */}
         <div className="flex flex-col items-center mb-6">
-          <p className="font-mono text-xs sm:text-sm uppercase tracking-widest text-slate-400 mb-3">
-            {EVENT_CONFIG.department} In Association With
+          {/* <p className="font-mono text-xs sm:text-sm uppercase tracking-widest text-slate-400 mb-3"> */}
+          <p className="font-display text-lg sm:text-2xl md:text-3xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-jedi-blue via-purple-300 to-sith-red uppercase">
+            {EVENT_CONFIG.department}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 bg-space-900/80 border border-space-800 px-4 py-2.5 rounded-2xl backdrop-blur-md shadow-[0_0_20px_rgba(0,0,0,0.5)]">
             {EVENT_CONFIG.clubs.map((club) => (
@@ -68,7 +69,7 @@ export const Hero: React.FC = () => {
           </div>
         </div>
 
-        {/* Main Title */}
+        {/* Main Title
         <div className="starwars-frame max-w-3xl mx-auto my-2">
           <h1 className="font-jedi text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wider text-white uppercase select-none">
             <span className="text-jedi-blue glow-text-blue">AI-</span>
@@ -78,7 +79,7 @@ export const Hero: React.FC = () => {
           <div className="mt-1 font-tech text-lg sm:text-2xl font-bold tracking-widest text-slate-300">
             2026
           </div>
-        </div>
+        </div> */}
 
         {/* Tagline */}
         <div className="mt-4 flex items-center justify-center gap-3">

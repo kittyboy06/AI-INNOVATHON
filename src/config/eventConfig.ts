@@ -221,7 +221,7 @@ export const EVENT_CONFIG = {
     {
       id: "Team",
       category: "Team",
-      title: "Only 1 person per team can register for the event.",
+      title: "Only 1 person per team should register for the event.",
       status: "allowed",
       description: " Each team must have a single point of contact for registration and communication. All team members must be listed in the registration form."
     },
@@ -235,9 +235,9 @@ export const EVENT_CONFIG = {
     {
       id: "hardware-components",
       category: "resources",
-      title: "Hardware Modules & Sensor Breakouts",
+      title: "Participants should bring their necessary requirements",
       status: "allowed",
-      description: "Hardware teams may bring pre-tested development boards and standard breakout modules. Final prototype assembly and AI integration happen on-site."
+      description: "Participants are expected to bring their own laptops, chargers, and any specific hardware components or sensors required for their project."
     },
     {
       id: "Lunch",

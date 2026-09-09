@@ -22,7 +22,7 @@ export const Hero: React.FC = () => {
             [ 7-HOUR HACKATHON ]
           </SciFiBadge>
           <SciFiBadge variant="violet">
-            [ ₹7,000 CASH PRIZE POOL ]
+            [ EXITING PRIZE POOL ]
           </SciFiBadge>
         </div>
 

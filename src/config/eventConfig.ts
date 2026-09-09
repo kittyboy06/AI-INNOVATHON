@@ -18,7 +18,7 @@ export const EVENT_CONFIG = {
   eventDateDisplay: "18 September 2026",
   eventDuration: "7 Hours",
   reportingTime: "8:00 AM",
-  concludeTime: "5:00 PM",
+  concludeTime: "4:00 PM",
   startTime: "9:00 AM",
   regClosingDateDisplay: "16 September 2026",
   
@@ -141,7 +141,7 @@ export const EVENT_CONFIG = {
         {
           phase: "STAGE 05 // JURY LIVE DEMO",
           timeline: "18 Sept (5:00 PM)",
-          description: "Present functioning hardware prototype live before the judging panel; event concludes at 5:00 PM."
+          description: "Present functioning hardware prototype live before the judging panel; event concludes at 4:00 PM."
         }
       ]
     } as ChallengeTrack,
@@ -200,7 +200,7 @@ export const EVENT_CONFIG = {
         {
           phase: "STAGE 05 // FINAL COMMIT & CONCLUSION",
           timeline: "18 Sept (5:00 PM)",
-          description: "Submit GitHub repo URL and final slide deck; event concludes at 5:00 PM."
+          description: "Submit GitHub repo URL and final slide deck; event concludes at 4:00 PM."
         }
       ]
     } as ChallengeTrack
@@ -463,7 +463,7 @@ export const EVENT_CONFIG = {
     {
       step: "06",
       title: "CONCLUDE",
-      description: "Commit your GitHub repository, submit presentations, and event concludes at 5:00 PM."
+      description: "Commit your GitHub repository, submit presentations, and event concludes at 4:00 PM."
     },
     {
       step: "07",
@@ -563,7 +563,7 @@ export const EVENT_CONFIG = {
     {
       id: "faq-3",
       question: "How long is the hackathon?",
-      answer: "The hackathon takes place on 18 September 2026. Reporting is at 8:00 AM and the event concludes at 5:00 PM."
+      answer: "The hackathon takes place on 18 September 2026. Reporting is at 8:00 AM and the event concludes at 4:00 PM."
     },
     {
       id: "faq-7",

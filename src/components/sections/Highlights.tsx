@@ -14,7 +14,7 @@ export const Highlights: React.FC = () => {
 
   return (
     <section className="relative py-12 px-4 sm:px-6 lg:px-8 border-y border-space-800/80 bg-space-950/70">
-      <div className="max-w-7xl mx-auto">
+      {/*<div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {EVENT_CONFIG.metrics.map((metric, idx) => (
             <HoloCard
@@ -41,7 +41,7 @@ export const Highlights: React.FC = () => {
             </HoloCard>
           ))}
         </div>
-      </div>
+      </div>*/}
     </section>
   );
 };

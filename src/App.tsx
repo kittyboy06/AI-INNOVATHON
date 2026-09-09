@@ -29,15 +29,15 @@ export const App: React.FC = () => {
       {/* Main Single-Page Narrative Flow */}
       <main className="relative z-10">
         <Hero />
-        <Highlights />
+        {/* <Highlights /> */}
+        <RegistrationCTA />
         <Mission />
-        <Challenge />
+        {/* <Challenge /> */}
         <HowItWorks />
         <Rules />
-        <EligibilityBenefits />
-        <Prizes />
+        {/* <EligibilityBenefits /> */}
+        {/*<Prizes />*/}
         <Submission />
-        <RegistrationCTA />
         <Venue />
         <Clubs />
         <FAQ />

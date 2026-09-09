@@ -108,7 +108,7 @@ export const Hero: React.FC = () => {
 
           <div className="flex items-center gap-2 bg-space-900/90 border border-force-purple/40 px-4 py-2 rounded-lg backdrop-blur-sm">
             <Clock className="w-4 h-4 text-force-magenta" />
-            <span>REPORT: {EVENT_CONFIG.reportingTime} • CONCLUDES: {EVENT_CONFIG.concludeTime}</span>
+            <span>REPORTING TIME: {EVENT_CONFIG.reportingTime}</span>
           </div>
 
           <div className="flex items-center gap-2 bg-space-900/90 border border-sith-red/40 px-4 py-2 rounded-lg backdrop-blur-sm shadow-[0_0_10px_rgba(255,0,60,0.15)]">

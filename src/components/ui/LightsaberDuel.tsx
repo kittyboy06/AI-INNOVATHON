@@ -176,9 +176,9 @@ export const LightsaberDuel: React.FC<LightsaberDuelProps> = ({
               THE LIGHT SIDE <span className="text-jedi-blue glow-text-blue">AI SPRINT</span>
             </h4>
 
-            <p className="mt-1 text-xs text-slate-400 font-sans max-w-xs">
+            {/* <p className="mt-1 text-xs text-slate-400 font-sans max-w-xs">
               Revealed on the spot at 9:00 AM on 18/09. Zero pre-built code allowed. Spontaneous algorithmic innovation.
-            </p>
+            </p> */}
 
             {/* Blue Lightsaber Blade Graphic */}
             <div className="mt-5 w-full flex items-center gap-2">
@@ -262,9 +262,9 @@ export const LightsaberDuel: React.FC<LightsaberDuelProps> = ({
               THE SITH FORCE <span className="text-sith-red glow-text-red">HARDWARE AIOT</span>
             </h4>
 
-            <p className="mt-1 text-xs text-slate-400 font-sans max-w-xs">
+            {/* <p className="mt-1 text-xs text-slate-400 font-sans max-w-xs">
               Revealed 2 days early on 16/09. 48 hours for component sourcing, circuit schematics, and sensor staging.
-            </p>
+            </p> */}
 
             {/* Red Lightsaber Blade Graphic */}
             <div className="mt-5 w-full flex items-center gap-2 flex-row-reverse">

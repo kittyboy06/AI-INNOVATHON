@@ -217,20 +217,20 @@ export const EVENT_CONFIG = {
   ],
 
   // Hackathon Rules
-  rules: [
+  rules: [  
     {
-      id: "ai-tools",
-      category: "tools",
-      title: "AI Tools & Foundation Models",
+      id: "Team",
+      category: "Team",
+      title: "Only 1 person per team can register for the event.",
       status: "allowed",
-      description: "Participants are encouraged to freely use AI tools, Copilot assistants, and foundation models."
+      description: " Each team must have a single point of contact for registration and communication. All team members must be listed in the registration form."
     },
     {
       id: "pre-existing-code",
-      category: "code",
-      title: "Pre-existing Code / Software Repositories",
-      status: "not_allowed",
-      description: "No pre-existing software code or pre-built repositories may be used. All software code must be committed during the 7-hour sprint."
+      category: "RECOGNITION",
+      title: "ID CARD IS MANDATORY FOR ALL PARTICIPANTS",
+      status: "allowed",
+      description: "All participants must carry their college-issued student ID cards for verification at the registration desk. No ID, no entry."
     },
     {
       id: "hardware-components",
@@ -240,25 +240,25 @@ export const EVENT_CONFIG = {
       description: "Hardware teams may bring pre-tested development boards and standard breakout modules. Final prototype assembly and AI integration happen on-site."
     },
     {
-      id: "external-apis",
-      category: "resources",
-      title: "Cloud APIs & Inference Endpoints",
+      id: "Lunch",
+      category: "Refreshments",
+      title: "Lunch & Refreshments",
       status: "allowed",
-      description: "External APIs, serverless backends, and cloud AI inference endpoints are fully permitted."
+      description: "Lunch and energizing snacks, tea/coffee, and beverages provided."
     },
     {
-      id: "open-source",
+      id: "water-bottles",
       category: "resources",
-      title: "Open-Source Packages & Libraries",
+      title: "Water Bottles",
       status: "allowed",
-      description: "Public open-source libraries, UI components, and ML packages are allowed across both tracks."
+      description: "Participants are encouraged to bring their own water bottles for hydration."
     },
     {
-      id: "online-datasets",
-      category: "resources",
-      title: "Online Public Datasets",
+      id: "Attire",
+      category: "Attire",
+      title: "Appropriate Attire",
       status: "allowed",
-      description: "Publicly accessible datasets from Kaggle, Hugging Face, or research portals are allowed."
+      description: "Participants must wear appropriate attire for the event."
     }
   ] as RuleItem[],
 
@@ -303,8 +303,8 @@ export const EVENT_CONFIG = {
     },
     {
       id: "snacks",
-      title: "Snacks & Refreshments",
-      description: "Energizing snacks, tea/coffee, and beverages provided throughout the intense 7-hour sprint.",
+      title: "Lunch & Refreshments",
+      description: "Lunch and energizing snacks, tea/coffee, and beverages provided.",
       provided: true
     },
     {
@@ -509,25 +509,25 @@ export const EVENT_CONFIG = {
   coordinators: {
     students: [
       {
-        name: "Jeffry Sam Raj C",
-        phone: "+91 97913 70951",
-        role: "Student Coordinator"
+        name: "Akshaya R",
+        phone: "+91 95245 79186",
+        role: "President-AAIML"
       },
       {
-        name: "Janani J",
-        phone: "+91 89255 29716",
-        role: "Student Coordinator"
+        name: "Balamurugan",
+        phone: "+91 73586 39093",
+        role: "President-IEI"
       }
     ] as Coordinator[],
     faculty: [
       {
-        name: "Ms. Janu",
-        phone: "+91 75980 81668",
+        name: "Ms. Vinitha",
+        phone: "+91 98942 26675",
         role: "Faculty Coordinator"
       },
       {
-        name: "Ms. Vinitha",
-        phone: "+91 98942 26675",
+        name: "Ms. Janu",
+        phone: "+91 75980 81668",
         role: "Faculty Coordinator"
       }
     ] as Coordinator[]
@@ -598,7 +598,7 @@ export const EVENT_CONFIG = {
     {
       id: "faq-17",
       question: "Is lunch provided?",
-      answer: "No, lunch is not provided. Participants can purchase lunch at college campus canteens or bring their own meals."
+      answer: "Yes, lunch and energizing snacks, tea/coffee, and beverages will be provided during the event."
     },
     {
       id: "faq-18",

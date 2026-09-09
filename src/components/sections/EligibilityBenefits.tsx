@@ -74,9 +74,9 @@ export const EligibilityBenefits: React.FC = () => {
                 className="p-5 flex items-start gap-3.5"
                 glowColor={idx % 2 === 0 ? 'cyan' : 'blue'}
               >
-                <div className="p-2 rounded-lg bg-jedi-blue/10 border border-jedi-blue/30 text-jedi-blue shrink-0">
+                {/* <div className="p-2 rounded-lg bg-jedi-blue/10 border border-jedi-blue/30 text-jedi-blue shrink-0">
                   <CheckCircle2 className="w-4 h-4" />
-                </div>
+                </div> */}
                 <div>
                   <span className="font-mono text-[10px] text-jedi-blue/80 tracking-widest uppercase">
                     DIRECTIVE 0{idx + 1}
@@ -136,13 +136,13 @@ export const EligibilityBenefits: React.FC = () => {
           </div>
 
           {/* Transparent Logistics Notice: What is NOT provided */}
-          <div className="rounded-2xl border border-amber-500/40 bg-amber-950/20 p-6 backdrop-blur-md">
+          {/*<div className="rounded-2xl border border-amber-500/40 bg-amber-950/20 p-6 backdrop-blur-md">
             <div className="flex items-center gap-2 mb-3">
               <AlertCircle className="w-5 h-5 text-amber-400 shrink-0" />
               <h4 className="font-tech text-sm font-bold uppercase tracking-wider text-amber-300">
                 TRANSPARENT LOGISTICS & SELF-ARRANGED ITEMS
               </h4>
-            </div>
+            </div> 
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-mono text-slate-300">
               {EVENT_CONFIG.benefits.filter(b => !b.provided).map((item) => (
@@ -159,7 +159,7 @@ export const EligibilityBenefits: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div>*/}
 
           {/* Block 3: Mission Gear Checklist */}
           <div className="mt-10 p-6 rounded-2xl border border-space-800 bg-space-900/60">

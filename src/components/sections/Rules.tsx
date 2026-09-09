@@ -31,7 +31,7 @@ export const Rules: React.FC = () => {
             [ PROTOCOL DIRECTIVES ]
           </SciFiBadge>
           <h2 className="font-tech text-3xl sm:text-5xl font-extrabold tracking-wider text-slate-100 uppercase">
-            HACKATHON <span className="text-cyber-cyan glow-text-cyan">RULES</span>
+            HACKATHON <span className="text-cyber-cyan glow-text-cyan">GUIDELINES</span>
           </h2>
           <div className="mt-4 h-1 w-24 bg-gradient-to-r from-cyber-cyan to-cyber-blue mx-auto rounded-full" />
           <p className="mt-4 text-sm sm:text-base text-slate-300 font-mono">

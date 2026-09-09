@@ -79,10 +79,7 @@ export const CountdownTimer: React.FC = () => {
         )}
 
         {/* Bottom Microcopy */}
-        <div className="mt-4 flex flex-wrap items-center justify-between text-[11px] font-mono text-slate-500">
-          <span>TIMEZONE: IST (UTC+05:30)</span>
-          <span className="hidden sm:inline">STATUS: SYNCHRONIZED</span>
-        </div>
+       
       </div>
     </div>
   );

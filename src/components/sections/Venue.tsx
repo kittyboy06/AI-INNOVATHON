@@ -44,7 +44,7 @@ export const Venue: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <Clock className="w-4 h-4 text-cyber-cyan shrink-0" />
-                  <span>Reporting: {EVENT_CONFIG.reportingTime} • Kickoff: {EVENT_CONFIG.startTime}</span>
+                  <span>Report Time: {EVENT_CONFIG.reportingTime} • Event Concludes: {EVENT_CONFIG.concludeTime}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="w-4 h-4 text-cyber-cyan shrink-0" />

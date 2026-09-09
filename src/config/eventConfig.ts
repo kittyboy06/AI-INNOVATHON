@@ -3,9 +3,9 @@ import { BenefitItem, ChallengeTrack, ClubItem, Coordinator, FAQItem, MetricItem
 export const EVENT_CONFIG = {
   name: "AI-INNOVATHON 2026",
   type: "Inter-College AI Hackathon",
-  subtitle: "An Inter-College 8-Hour AI Hackathon",
+  subtitle: "An Inter-College 7-Hour AI Hackathon",
   tagline: "THINK. BUILD. INNOVATE.",
-  heroPunchline: "8 HOURS. TWO PATHS. ONE GALAXY.",
+  heroPunchline: "7 HOURS. ONE CHALLENGE.",
   department: "Department of Artificial Intelligence & Machine Learning",
   institution: "Jerusalem College of Engineering",
   venue: {
@@ -16,8 +16,9 @@ export const EVENT_CONFIG = {
   
   // Key Dates & Times
   eventDateDisplay: "18 September 2026",
-  eventDuration: "8 Hours",
-  reportingTime: "8:30 AM",
+  eventDuration: "7 Hours",
+  reportingTime: "8:00 AM",
+  concludeTime: "5:00 PM",
   startTime: "9:00 AM",
   regClosingDateDisplay: "16 September 2026",
   
@@ -36,8 +37,8 @@ export const EVENT_CONFIG = {
   // Financials
   registrationFee: "₹400",
   registrationFeeNumber: 400,
-  prizePool: "₹8,000",
-  prizePoolNumber: 8000,
+  prizePool: "₹7,000",
+  prizePoolNumber: 7000,
   paymentMethod: "UPI through the Google Form",
 
   // Problem statement highlights
@@ -46,7 +47,7 @@ export const EVENT_CONFIG = {
 
   // External Action URLs
   urls: {
-    googleForm: "https://docs.google.com/forms/d/e/1FAIpQLSe-PLACEHOLDER/viewform",
+    googleForm: "https://docs.google.com/forms/d/e/AI-INNOVATHON-2026/viewform",
     whatsappGroup: "https://chat.whatsapp.com/DQwMuhNTDNKDlfbTgI06cH",
     googleMaps: "https://maps.app.goo.gl/Jbj6Cb1UEZbQmmFp9",
   },
@@ -57,12 +58,12 @@ export const EVENT_CONFIG = {
   // Metrics / Highlights
   metrics: [
     {
-      value: "8 HOURS",
+      value: "7 HOURS",
       label: "Mission Duration",
       detail: "Intense hackathon sprint of rapid AI development and prototype engineering."
     },
     {
-      value: "₹8,000",
+      value: "₹7,000",
       label: "Prize Pool",
       detail: "Cash awards and prestigious certificates recognizing elite AI engineering."
     },
@@ -129,18 +130,18 @@ export const EVENT_CONFIG = {
         },
         {
           phase: "STAGE 03 // ON-SITE CHECK-IN",
-          timeline: "18 Sept (8:30 AM)",
-          description: "Report to Jerusalem College of Engineering and set up hardware testing bench."
+          timeline: "18 Sept (8:00 AM)",
+          description: "Report to Jerusalem College of Engineering at 8:00 AM and set up hardware testing bench."
         },
         {
           phase: "STAGE 04 // EMBEDDED INTEGRATION",
-          timeline: "18 Sept (9:00 AM - 5:00 PM)",
+          timeline: "18 Sept (Day Sprint)",
           description: "Assemble physical chassis, calibrate sensor feeds, and deploy edge AI models."
         },
         {
           phase: "STAGE 05 // JURY LIVE DEMO",
-          timeline: "18 Sept (5:15 PM)",
-          description: "Present functioning hardware prototype live in action before the judging panel."
+          timeline: "18 Sept (5:00 PM)",
+          description: "Present functioning hardware prototype live before the judging panel; event concludes at 5:00 PM."
         }
       ]
     } as ChallengeTrack,
@@ -178,28 +179,28 @@ export const EVENT_CONFIG = {
       keySteps: [
         {
           phase: "STAGE 01 // ON-SITE REPORTING",
-          timeline: "18 Sept (8:30 AM)",
-          description: "Check in at the registration desk, verify team credentials, connect to high-speed Wi-Fi."
+          timeline: "18 Sept (8:00 AM)",
+          description: "Check in at the registration desk by 8:00 AM, verify team credentials, connect to high-speed Wi-Fi."
         },
         {
           phase: "STAGE 02 // SURPRISE UNLOCK",
-          timeline: "18 Sept (9:00 AM)",
+          timeline: "18 Sept (Morning)",
           description: "Classified software problem statement is revealed on the spot. Clock starts ticking."
         },
         {
           phase: "STAGE 03 // AGILE BUILD SPRINT",
-          timeline: "18 Sept (9:00 AM - 1:00 PM)",
+          timeline: "18 Sept (Build Sprint)",
           description: "Architect backend APIs, prompt/fine-tune AI models, build frontend UI."
         },
         {
           phase: "STAGE 04 // MENTOR ITERATION",
-          timeline: "18 Sept (1:00 PM - 5:00 PM)",
+          timeline: "18 Sept (Mentor Check-ins)",
           description: "Refine architecture with faculty mentors, test edge cases, push clean git commits."
         },
         {
-          phase: "STAGE 05 // FINAL COMMIT & PPT",
+          phase: "STAGE 05 // FINAL COMMIT & CONCLUSION",
           timeline: "18 Sept (5:00 PM)",
-          description: "Submit GitHub repo URL and final slide deck before the gate bell."
+          description: "Submit GitHub repo URL and final slide deck; event concludes at 5:00 PM."
         }
       ]
     } as ChallengeTrack
@@ -229,7 +230,7 @@ export const EVENT_CONFIG = {
       category: "code",
       title: "Pre-existing Code / Software Repositories",
       status: "not_allowed",
-      description: "No pre-existing software code or pre-built repositories may be used. All software code must be committed during the 8-hour sprint."
+      description: "No pre-existing software code or pre-built repositories may be used. All software code must be committed during the 7-hour sprint."
     },
     {
       id: "hardware-components",
@@ -296,14 +297,14 @@ export const EVENT_CONFIG = {
     },
     {
       id: "prizes",
-      title: "₹8,000 Cash Prize Pool",
+      title: "₹7,000 Cash Prize Pool",
       description: "Grand cash awards, winning trophies, and merit certificates for top innovators.",
       provided: true
     },
     {
       id: "snacks",
       title: "Snacks & Refreshments",
-      description: "Energizing snacks, tea/coffee, and beverages provided throughout the intense 8-hour sprint.",
+      description: "Energizing snacks, tea/coffee, and beverages provided throughout the intense 7-hour sprint.",
       provided: true
     },
     {
@@ -345,7 +346,7 @@ export const EVENT_CONFIG = {
     {
       id: "stay",
       title: "Accommodation (Single-Day Event)",
-      description: "Accommodation is not available. Please plan local travel for the 8-hour day sprint.",
+      description: "Accommodation is not available. Please plan local travel for the 7-hour day sprint.",
       provided: false
     },
     {
@@ -392,13 +393,13 @@ export const EVENT_CONFIG = {
       id: "start-sw-reveal",
       time: "18 Sept • 9:00 AM",
       title: "💻 Software Problem Statement Reveal & Kickoff",
-      description: "Software PS unlocked live on the spot. The 8-hour build sprint timer commences for both tracks.",
+      description: "Software PS unlocked live on the spot. The 7-hour build sprint timer commences for both tracks.",
       status: "confirmed"
     },
     {
       id: "building-phase",
-      time: "9:00 AM – 5:00 PM",
-      title: "8-Hour Development Sprint & Mentor Rounds",
+      time: "9:00 AM – 4:00 PM",
+      title: "7-Hour Development Sprint & Mentor Rounds",
       description: "Teams architect, code, and test their AI solutions with active faculty and mentor check-ins.",
       status: "confirmed"
     },
@@ -426,7 +427,7 @@ export const EVENT_CONFIG = {
     {
       id: "valedictory",
       time: "18 Sept • 6:30 PM",
-      title: "Valedictory & ₹8,000 Prize Distribution",
+      title: "Valedictory & ₹7,000 Prize Distribution",
       description: "Announcement of top winners, awarding of cash prizes and certificates of excellence.",
       status: "confirmed"
     }
@@ -447,22 +448,22 @@ export const EVENT_CONFIG = {
     {
       step: "03",
       title: "REPORT",
-      description: "Arrive at Jerusalem College of Engineering campus by 8:30 AM on 18 September 2026."
+      description: "Arrive at Jerusalem College of Engineering campus by 8:00 AM on 18 September 2026."
     },
     {
       step: "04",
       title: "COMMENCE",
-      description: "Attend inauguration at 8:30 AM; Software PS unlocked live at 9:00 AM."
+      description: "Attend morning briefing; Software PS unlocked live for building sprint."
     },
     {
       step: "05",
       title: "BUILD",
-      description: "Sprint for 8 hours with mentor support, lab workstations, and campus Wi-Fi."
+      description: "Build cutting-edge prototypes with mentor support, lab workstations, and campus Wi-Fi."
     },
     {
       step: "06",
-      title: "SUBMIT",
-      description: "Commit your GitHub repository and upload your PPT slide deck before 5:00 PM."
+      title: "CONCLUDE",
+      description: "Commit your GitHub repository, submit presentations, and event concludes at 5:00 PM."
     },
     {
       step: "07",
@@ -472,7 +473,7 @@ export const EVENT_CONFIG = {
     {
       step: "08",
       title: "WIN",
-      description: "Compete for top honors, merit certificates, and a share of the ₹8,000 prize pool."
+      description: "Compete for top honors, merit certificates, and a share of the ₹7,000 prize pool."
     }
   ],
 
@@ -481,30 +482,26 @@ export const EVENT_CONFIG = {
     {
       id: "association-of-aiml",
       name: "Association of AIML",
-      tagline: "Student technical chapter promoting cutting-edge AI discourse",
+      tagline: "Student Technical Chapter",
       logo: "/logos/logo-aaiml.png",
-      description: "Premier departmental student organization spearheading artificial intelligence and deep learning initiatives."
     },
     {
       id: "intellizone",
       name: "Intellizone",
-      tagline: "Innovation hub driving intelligent systems and algorithms",
+      tagline: "Student Technical Chapter",
       logo: "/logos/logo-intellizone.png",
-      description: "Technical innovation and research club fostering applied machine learning and automation prototypes."
     },
     {
       id: "code-mavericks",
       name: "Code Mavericks",
-      tagline: "Elite competitive programming and software engineering circle",
+      tagline: "Student Developer Club",
       logo: "/logos/logo-codemavericks.png",
-      description: "Student developer consortium specializing in algorithmic problem solving, software craft, and hackathon mastery."
     },
     {
       id: "iei-of-aiml",
       name: "IEI of AIML",
-      tagline: "Institution of Engineers (India) collegiate student division",
+      tagline: "Institution of Engineers (India) Chapter",
       logo: "/logos/logo-iei.webp",
-      description: "Chartered student branch of The Institution of Engineers (India) advancing professional engineering practices."
     }
   ] as ClubItem[],
 
@@ -541,12 +538,12 @@ export const EVENT_CONFIG = {
     {
       id: "faq-1",
       question: "When is AI-Innovathon?",
-      answer: "AI-Innovathon takes place on 18 September 2026 (18/09). Reporting is at 8:30 AM and the official building sprint commences at 9:00 AM."
+      answer: "AI-Innovathon takes place on 18 September 2026 (18/09). Report time is at 8:00 AM and the event will conclude at 5:00 PM."
     },
     {
       id: "faq-ps-split",
       question: "How is the challenge split between Hardware and Software?",
-      answer: "The hackathon features two separated challenge tracks: Hardware Track (problem statement revealed 2 days early on 16 September 2026 for component sourcing and circuit prep) and Software Track (problem statement revealed on the spot at 9:00 AM on 18 September 2026 for pure spontaneous AI coding)."
+      answer: "The hackathon features two separated challenge tracks: Hardware Track (problem statement revealed 2 days early on 16 September 2026 for component sourcing and circuit prep) and Software Track (problem statement revealed on the spot on 18 September 2026 for pure spontaneous AI coding)."
     },
     {
       id: "faq-hw-reason",
@@ -556,7 +553,7 @@ export const EVENT_CONFIG = {
     {
       id: "faq-sw-spot",
       question: "When is the Software problem statement revealed?",
-      answer: "The Software problem statement is unlocked on the spot at 9:00 AM on 18 September 2026 in the auditorium. Strictly zero pre-existing code is allowed, ensuring an authentic 8-hour sprint."
+      answer: "The Software problem statement is unlocked on the spot on 18 September 2026 in the auditorium. Strictly zero pre-existing code is allowed."
     },
     {
       id: "faq-2",
@@ -566,7 +563,7 @@ export const EVENT_CONFIG = {
     {
       id: "faq-3",
       question: "How long is the hackathon?",
-      answer: "The hackathon is an intense 8-hour continuous building sprint from 9:00 AM to 5:00 PM on 18 September 2026."
+      answer: "The hackathon takes place on 18 September 2026. Reporting is at 8:00 AM and the event concludes at 5:00 PM."
     },
     {
       id: "faq-7",
@@ -581,7 +578,7 @@ export const EVENT_CONFIG = {
     {
       id: "faq-9",
       question: "What is the prize pool?",
-      answer: "The total prize pool for AI-INNOVATHON 2026 is ₹8,000, along with trophies and merit certificates."
+      answer: "The total prize pool for AI-INNOVATHON 2026 is ₹7,000, along with trophies and merit certificates."
     },
     {
       id: "faq-10",

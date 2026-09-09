@@ -53,7 +53,7 @@ export const CountdownTimer: React.FC = () => {
               </span>
             </div>
             <p className="mt-3 text-xs md:text-sm text-slate-400 font-mono">
-              8-Hour Hackathon Sprint Live at Jerusalem College of Engineering
+              7-Hour Hackathon Sprint Live at Jerusalem College of Engineering
             </p>
           </div>
         ) : (

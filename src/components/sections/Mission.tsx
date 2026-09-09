@@ -17,7 +17,7 @@ export const Mission: React.FC = () => {
     },
     {
       icon: <Target className="w-5 h-5 text-force-magenta" />,
-      title: 'Agile 8-Hour Execution',
+      title: 'Agile 7-Hour Execution',
       description: 'Transform theoretical algorithms into deployable hardware or software prototypes during the intense on-campus sprint on 18/09.',
     },
     {
@@ -50,7 +50,7 @@ export const Mission: React.FC = () => {
           </h2>
           <div className="mt-4 h-1 w-28 bg-gradient-to-r from-jedi-blue via-force-purple to-sith-red mx-auto rounded-full" />
           <p className="mt-6 text-base sm:text-lg text-slate-300 font-sans leading-relaxed">
-            AI-INNOVATHON 2026 is an inter-college arena uniting Hardware innovators and Software architects. On 18 September 2026, squads deploy to Jerusalem College of Engineering to engineer cutting-edge AI prototypes under intense 8-hour conditions.
+            AI-INNOVATHON 2026 is an inter-college arena uniting Hardware innovators and Software architects. On 18 September 2026, squads deploy to Jerusalem College of Engineering to engineer cutting-edge AI prototypes under intense 7-hour conditions.
           </p>
         </div>
 

@@ -63,7 +63,7 @@ export const EligibilityBenefits: React.FC = () => {
               ELIGIBILITY <span className="text-jedi-blue glow-text-blue">& FORMATION</span>
             </h2>
             <p className="mt-3 text-sm text-slate-400 font-mono">
-              WHO CAN ACCEPT THE 8-HOUR HACKATHON CHALLENGE
+              WHO CAN ACCEPT THE 7-HOUR HACKATHON CHALLENGE
             </p>
           </div>
 

@@ -7,7 +7,6 @@ import { Highlights } from './components/sections/Highlights';
 import { Mission } from './components/sections/Mission';
 import { Challenge } from './components/sections/Challenge';
 import { HowItWorks } from './components/sections/HowItWorks';
-import { Timeline } from './components/sections/Timeline';
 import { Prizes } from './components/sections/Prizes';
 import { EligibilityBenefits } from './components/sections/EligibilityBenefits';
 import { Rules } from './components/sections/Rules';
@@ -34,7 +33,6 @@ export const App: React.FC = () => {
         <Mission />
         <Challenge />
         <HowItWorks />
-        <Timeline />
         <Prizes />
         <EligibilityBenefits />
         <Rules />

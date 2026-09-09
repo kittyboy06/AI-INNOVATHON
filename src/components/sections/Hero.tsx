@@ -19,10 +19,10 @@ export const Hero: React.FC = () => {
             [ MISSION DATE: 18/09/2026 ]
           </SciFiBadge>
           <SciFiBadge variant="amber">
-            [ STAR WARS // DUAL LIGHTSABER EDITION ]
+            [ 7-HOUR AI HACKATHON ]
           </SciFiBadge>
           <SciFiBadge variant="violet">
-            [ ₹8,000 CASH PRIZE POOL ]
+            [ ₹7,000 CASH PRIZE POOL ]
           </SciFiBadge>
         </div>
 
@@ -65,20 +65,10 @@ export const Hero: React.FC = () => {
             />
             {/* Ambient edge glow overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-space-950 via-transparent to-transparent opacity-60 pointer-events-none" />
-            
-            {/* Corner Force Indicators */}
-            <div className="absolute bottom-3 left-4 flex items-center gap-2 font-mono text-[11px] text-jedi-blue bg-space-950/80 px-2.5 py-1 rounded border border-jedi-blue/40 backdrop-blur-md">
-              <span className="w-2 h-2 rounded-full bg-jedi-blue animate-pulse" />
-              <span>JEDI SQUADRON // 18/09 LIVE UNLOCK</span>
-            </div>
-            <div className="absolute bottom-3 right-4 flex items-center gap-2 font-mono text-[11px] text-sith-red bg-space-950/80 px-2.5 py-1 rounded border border-sith-red/40 backdrop-blur-md">
-              <span>SITH SQUADRON // 16/09 48H EARLY</span>
-              <span className="w-2 h-2 rounded-full bg-sith-red animate-pulse" />
-            </div>
           </div>
         </div>
 
-        {/* Main Star Wars Framed Typography Title */}
+        {/* Main Title */}
         <div className="starwars-frame max-w-3xl mx-auto my-2">
           <h1 className="font-jedi text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wider text-white uppercase select-none">
             <span className="text-jedi-blue glow-text-blue">AI-</span>
@@ -86,7 +76,7 @@ export const Hero: React.FC = () => {
             <span className="text-sith-red glow-text-red">THON</span>
           </h1>
           <div className="mt-1 font-tech text-lg sm:text-2xl font-bold tracking-widest text-slate-300">
-            2026 <span className="text-force-magenta">GALACTIC SPRINT</span>
+            2026
           </div>
         </div>
 
@@ -104,37 +94,6 @@ export const Hero: React.FC = () => {
           {EVENT_CONFIG.subtitle}
         </p>
 
-        {/* Dual Track Announcement Ribbon */}
-        <div className="mt-7 max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-left">
-          {/* Hardware Track Ribbon */}
-          <div className="relative p-4 rounded-xl border border-sith-red/50 bg-sith-dark/20 backdrop-blur-md shadow-[0_0_15px_rgba(255,0,60,0.2)]">
-            <div className="flex items-center gap-2 text-sith-red font-mono text-xs font-bold uppercase mb-1">
-              <Cpu className="w-4 h-4" />
-              <span>⚡ HARDWARE & AIOT TRACK</span>
-            </div>
-            <div className="font-tech text-sm font-bold text-white">
-              REVEALED 2 DAYS EARLY (16/09)
-            </div>
-            <p className="text-xs text-slate-400 mt-1 font-sans">
-              48-hour runway for component sourcing, circuit schematics, and sensor staging.
-            </p>
-          </div>
-
-          {/* Software Track Ribbon */}
-          <div className="relative p-4 rounded-xl border border-jedi-blue/50 bg-jedi-dark/20 backdrop-blur-md shadow-[0_0_15px_rgba(0,210,255,0.2)]">
-            <div className="flex items-center gap-2 text-jedi-blue font-mono text-xs font-bold uppercase mb-1">
-              <Code2 className="w-4 h-4" />
-              <span>💻 SOFTWARE & AI TRACK</span>
-            </div>
-            <div className="font-tech text-sm font-bold text-white">
-              REVEALED ON THE SPOT (18/09)
-            </div>
-            <p className="text-xs text-slate-400 mt-1 font-sans">
-              Unlocked at 9:00 AM kickoff. Zero pre-built code allowed. Pure algorithmic agility.
-            </p>
-          </div>
-        </div>
-
         {/* Interactive Lightsaber Clash Component */}
         <div className="mt-6">
           <LightsaberDuel />
@@ -149,7 +108,7 @@ export const Hero: React.FC = () => {
 
           <div className="flex items-center gap-2 bg-space-900/90 border border-force-purple/40 px-4 py-2 rounded-lg backdrop-blur-sm">
             <Clock className="w-4 h-4 text-force-magenta" />
-            <span>{EVENT_CONFIG.eventDuration} • REPORT: {EVENT_CONFIG.reportingTime}</span>
+            <span>REPORT: {EVENT_CONFIG.reportingTime} • CONCLUDES: {EVENT_CONFIG.concludeTime}</span>
           </div>
 
           <div className="flex items-center gap-2 bg-space-900/90 border border-sith-red/40 px-4 py-2 rounded-lg backdrop-blur-sm shadow-[0_0_10px_rgba(255,0,60,0.15)]">

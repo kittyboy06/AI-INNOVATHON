@@ -47,7 +47,7 @@ export const EVENT_CONFIG = {
 
   // External Action URLs
   urls: {
-    googleForm: "https://docs.google.com/forms/d/e/AI-INNOVATHON-2026/viewform",
+    googleForm: "https://forms.gle/jrrf5ePjjaRCU7uW9",
     whatsappGroup: "https://chat.whatsapp.com/DQwMuhNTDNKDlfbTgI06cH",
     googleMaps: "https://maps.app.goo.gl/Jbj6Cb1UEZbQmmFp9",
   },

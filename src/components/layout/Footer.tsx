@@ -9,6 +9,7 @@ export const Footer: React.FC = () => {
     { label: 'Mission', href: '#mission' },
     { label: 'Challenge', href: '#challenge' },
     { label: 'Rules', href: '#rules' },
+    { label: 'Benefits', href: '#benefits' },
     { label: 'Prizes', href: '#prizes' },
     { label: 'Register', href: '#register' },
     { label: 'Venue', href: '#venue' },

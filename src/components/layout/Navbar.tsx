@@ -10,9 +10,10 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { label: 'HOME', href: '#hero' },
+    { label: 'MISSION', href: '#mission' },
     { label: 'CHALLENGE', href: '#challenge' },
-    { label: 'BENEFITS', href: '#benefits' },
     { label: 'RULES', href: '#rules' },
+    { label: 'BENEFITS', href: '#benefits' },
     { label: 'PRIZES', href: '#prizes' },
     { label: 'REGISTER', href: '#register' },
     { label: 'VENUE', href: '#venue' },
@@ -25,18 +26,20 @@ export const Navbar: React.FC = () => {
       setIsScrolled(window.scrollY > 40);
 
       // Scrollspy
-      const sections = navLinks.map((link) => link.href.substring(1));
-      const scrollPosition = window.scrollY + 200;
+      const scrollPosition = window.scrollY + 220;
+      const isBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 80;
 
-      for (const sectionId of sections) {
+      if (isBottom) {
+        setActiveSection('contact');
+        return;
+      }
+
+      for (let i = navLinks.length - 1; i >= 0; i--) {
+        const sectionId = navLinks[i].href.substring(1);
         const el = document.getElementById(sectionId);
-        if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < top + height) {
-            setActiveSection(sectionId);
-            break;
-          }
+        if (el && scrollPosition >= el.offsetTop) {
+          setActiveSection(sectionId);
+          break;
         }
       }
     };
@@ -77,14 +80,14 @@ export const Navbar: React.FC = () => {
             </a>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden xl:flex items-center gap-1 bg-space-900/70 p-1.5 rounded-full border border-space-700/80 backdrop-blur-md">
+            <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1 bg-space-900/70 p-1 xl:p-1.5 rounded-full border border-space-700/80 backdrop-blur-md">
               {navLinks.map((link) => {
                 const isActive = activeSection === link.href.substring(1);
                 return (
                   <a
                     key={link.label}
                     href={link.href}
-                    className={`px-3 py-1 text-xs font-mono font-semibold tracking-wider rounded-full transition-all duration-200 ${
+                    className={`px-2.5 xl:px-3 py-1 text-[11px] xl:text-xs font-mono font-semibold tracking-wider rounded-full transition-all duration-200 ${
                       isActive
                         ? 'bg-jedi-blue/20 text-jedi-blue border border-jedi-blue/50 shadow-[0_0_12px_rgba(0,210,255,0.4)]'
                         : 'text-slate-300 hover:text-white hover:bg-space-800/60'

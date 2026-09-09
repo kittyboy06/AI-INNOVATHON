@@ -33,9 +33,9 @@ export const App: React.FC = () => {
         <Mission />
         <Challenge />
         <HowItWorks />
-        <Prizes />
-        <EligibilityBenefits />
         <Rules />
+        <EligibilityBenefits />
+        <Prizes />
         <Submission />
         <RegistrationCTA />
         <Venue />

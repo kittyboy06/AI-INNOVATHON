@@ -140,7 +140,7 @@ export const EVENT_CONFIG = {
         },
         {
           phase: "STAGE 05 // JURY LIVE DEMO",
-          timeline: "18 Sept (5:00 PM)",
+          timeline: "18 Sept (4:00 PM)",
           description: "Present functioning hardware prototype live before the judging panel; event concludes at 4:00 PM."
         }
       ]
@@ -199,7 +199,7 @@ export const EVENT_CONFIG = {
         },
         {
           phase: "STAGE 05 // FINAL COMMIT & CONCLUSION",
-          timeline: "18 Sept (5:00 PM)",
+          timeline: "18 Sept (4:00 PM)",
           description: "Submit GitHub repo URL and final slide deck; event concludes at 4:00 PM."
         }
       ]
@@ -412,7 +412,7 @@ export const EVENT_CONFIG = {
     },
     {
       id: "submission-gate",
-      time: "18 Sept • 5:00 PM",
+      time: "18 Sept • 4:00 PM",
       title: "Code & Hardware Submission Gate Closes",
       description: "Final GitHub repositories committed and PPT presentations submitted.",
       status: "confirmed"
@@ -538,7 +538,7 @@ export const EVENT_CONFIG = {
     {
       id: "faq-1",
       question: "When is AI-Innovathon?",
-      answer: "AI-Innovathon takes place on 18 September 2026 (18/09). Report time is at 8:00 AM and the event will conclude at 5:00 PM."
+      answer: "AI-Innovathon takes place on 18 September 2026 (18/09). Report time is at 8:00 AM and the event will conclude at 4:00 PM."
     },
     {
       id: "faq-ps-split",

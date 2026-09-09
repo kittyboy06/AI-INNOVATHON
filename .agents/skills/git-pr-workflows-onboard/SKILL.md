@@ -387,7 +387,7 @@ Ensuring onboarding effectiveness and iteration:
 - [ ] Security training and 2FA setup (30 min)
 ```
 
-**Afternoon (1:00 PM - 5:00 PM)**
+**Afternoon (1:00 PM - 4:00 PM)**
 ```checklist
 - [ ] Lunch with buddy and team (60 min)
 - [ ] Laptop setup with IT support (90 min)

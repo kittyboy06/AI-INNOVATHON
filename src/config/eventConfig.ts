@@ -3,7 +3,7 @@ import { BenefitItem, ChallengeTrack, ClubItem, Coordinator, FAQItem, MetricItem
 export const EVENT_CONFIG = {
   name: "AI-INNOVATHON 2026",
   type: "Inter-College AI Hackathon",
-  subtitle: "An Inter-College 7-Hour AI Hackathon",
+  subtitle: "An Inter-College 7-Hour Hackathon",
   tagline: "THINK. BUILD. INNOVATE.",
   heroPunchline: "7 HOURS. ONE CHALLENGE.",
   department: "Department of Artificial Intelligence & Machine Learning",

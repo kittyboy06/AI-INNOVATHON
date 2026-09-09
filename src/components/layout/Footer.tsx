@@ -36,7 +36,7 @@ export const Footer: React.FC = () => {
             </div>
             
             <p className="text-sm text-slate-400 max-w-md leading-relaxed">
-              An Inter-College 7-Hour AI Hackathon organized by the{' '}
+              An Inter-College 7-Hour Hackathon organized by the{' '}
               <span className="text-slate-200 font-medium">{EVENT_CONFIG.department}</span> at{' '}
               <span className="text-slate-200 font-medium">{EVENT_CONFIG.institution}</span>.
             </p>

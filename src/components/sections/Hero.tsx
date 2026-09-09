@@ -19,7 +19,7 @@ export const Hero: React.FC = () => {
             [ MISSION DATE: 18/09/2026 ]
           </SciFiBadge>
           <SciFiBadge variant="amber">
-            [ 7-HOUR AI HACKATHON ]
+            [ 7-HOUR HACKATHON ]
           </SciFiBadge>
           <SciFiBadge variant="violet">
             [ ₹7,000 CASH PRIZE POOL ]

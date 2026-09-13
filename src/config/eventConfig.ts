@@ -216,49 +216,79 @@ export const EVENT_CONFIG = {
     "There is no restriction on the number of teams representing an institution."
   ],
 
-  // Hackathon Rules
-  rules: [  
+  // Hackathon Guidelines & Directives
+  rules: [
     {
-      id: "Team",
-      category: "Team",
-      title: "Only 1 person per team should register for the event.",
+      id: "ai-tools",
+      category: "Development Tools",
+      group: "technical",
+      title: "AI Tools & Foundation Models",
       status: "allowed",
-      description: " Each team must have a single point of contact for registration and communication. All team members must be listed in the registration form."
+      tag: "PERMITTED ACCELERATOR",
+      description: "Participants are encouraged to freely utilize AI assistants, GitHub Copilot, Gemini, ChatGPT, and foundation model APIs during development."
     },
     {
       id: "pre-existing-code",
-      category: "RECOGNITION",
-      title: "ID CARD IS MANDATORY FOR ALL PARTICIPANTS",
-      status: "allowed",
-      description: "All participants must carry their college-issued student ID cards for verification at the registration desk. No ID, no entry."
+      category: "Source Integrity",
+      group: "technical",
+      title: "Pre-Existing Code / Repositories",
+      status: "not_allowed",
+      tag: "STRICTLY FORBIDDEN",
+      description: "Strictly zero pre-existing software code or pre-built repositories may be used. All project code must be committed live during the sprint."
     },
     {
-      id: "hardware-components",
-      category: "resources",
-      title: "Participants should bring their necessary requirements",
+      id: "cloud-apis-libraries",
+      category: "Resources & APIs",
+      group: "technical",
+      title: "Cloud APIs & Open-Source Libraries",
       status: "allowed",
-      description: "Participants are expected to bring their own laptops, chargers, and any specific hardware components or sensors required for their project."
+      tag: "PERMITTED RESOURCES",
+      description: "External cloud APIs, open-source libraries, UI component packages, and public datasets (Kaggle, Hugging Face) are fully permitted."
     },
     {
-      id: "Lunch",
-      category: "Refreshments",
-      title: "Lunch & Refreshments",
-      status: "allowed",
-      description: "Lunch and energizing snacks, tea/coffee, and beverages provided."
+      id: "team-registration",
+      category: "Registration Protocol",
+      group: "venue",
+      title: "Single Team Representative Registration",
+      status: "mandatory",
+      tag: "TEAM DIRECTIVE",
+      description: "Only 1 person (the team leader) should submit the registration form on behalf of the squad. All 2 to 4 team members must be listed in the form."
     },
     {
-      id: "water-bottles",
-      category: "resources",
-      title: "Water Bottles",
-      status: "allowed",
-      description: "Participants are encouraged to bring their own water bottles for hydration."
+      id: "mandatory-id-card",
+      category: "Campus Security",
+      group: "venue",
+      title: "Mandatory College Student ID Card",
+      status: "mandatory",
+      tag: "SECURITY PROTOCOL",
+      description: "All participants must carry their physical college-issued student ID cards for verification at the registration desk. No ID, strictly no entry."
     },
     {
-      id: "Attire",
-      category: "Attire",
-      title: "Appropriate Attire",
-      status: "allowed",
-      description: "Participants must wear appropriate attire for the event."
+      id: "hardware-laptops",
+      category: "Workstation Gear",
+      group: "venue",
+      title: "Bring Required Laptops & Gear",
+      status: "required",
+      tag: "BRING YOUR OWN",
+      description: "Participants are expected to bring their own laptops, chargers, and any track-specific hardware components, development boards, or sensors."
+    },
+    {
+      id: "lunch-refreshments",
+      category: "Hospitality",
+      group: "venue",
+      title: "Complimentary Lunch & Refreshments",
+      status: "provided",
+      tag: "MEALS PROVIDED",
+      description: "Complimentary lunch, tea/coffee, and energizing refreshments will be provided to all registered participants throughout the hackathon."
+    },
+    {
+      id: "campus-attire",
+      category: "Code of Conduct",
+      group: "venue",
+      title: "Campus Dress Code & Decorum",
+      status: "mandatory",
+      tag: "CAMPUS DIRECTIVE",
+      description: "Participants must adhere to professional or college-appropriate attire and maintain academic decorum and discipline on campus premises."
     }
   ] as RuleItem[],
 

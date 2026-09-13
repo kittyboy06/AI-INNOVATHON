@@ -13,12 +13,18 @@ export interface TimelineItem {
   iconName?: string;
 }
 
+export type RuleStatus = 'allowed' | 'not_allowed' | 'mandatory' | 'provided' | 'required';
+export type RuleGroup = 'technical' | 'venue' | 'general';
+
 export interface RuleItem {
   id: string;
-  category: 'tools' | 'code' | 'resources';
+  category: string;
   title: string;
-  status: 'allowed' | 'not_allowed';
+  status: RuleStatus;
   description: string;
+  group?: RuleGroup;
+  tag?: string;
+  highlight?: string;
 }
 
 export interface BenefitItem {
